@@ -17,10 +17,10 @@ CC3D has over 1.25 million buildings available in over 90 cities. Their focus is
 Premium content
 ---------------
 
-The CC3D buildings are premium content. You can order the buildings through Maproom and orders are processed by CC3D themselves. Maproom let's you easily integrate these buildings in your maps. CC3D charges for their buildings per square kilometer. Once you've purchased an area, you can use this in as many maps as you like. The minimum purchase size is one square kilometer.
+The CC3D buildings are premium content. You can order the buildings through Maproom and orders are processed by CC3D themselves. Maproom let's you easily integrate these buildings in your maps. CC3D charges for their buildings per square kilometer. Once you've purchased an area, you can use this in as many maps as you like.
 
-Off the shelf buildings
-^^^^^^^^^^^^^^^^^^^^^^^
+Off the shelf buildings, 1 km2 minimum
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * $400/km2
 
@@ -28,6 +28,20 @@ New buildings, 2 km2 minimum
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * $1800/km2
+
+Terms of use for the CyberCity 3D content
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+These "Terms of Use" set forth the terms and conditions that apply to your use of CyberCity 3D, Inc. 3D building models (the "data"). By using the data, you agree to comply with all of the Terms of Use set forth herein. The right to use the data is personal to you and is not transferable to any other person or entity.
+
+**Copyrights and Trademarks**
+
+A. All information contained in the data are Copyright CyberCity 3D, Inc., 2016. All rights reserved.
+B. No person is authorized to distribute or sell the data to any other person(s) or organization(s) under any circumstances.  Use of the data outside of Maproom plug-in for the Autodesk 3ds Max application is prohibited.
+
+**Changes to These Terms of Use**
+
+CyberCity 3D, Inc. reserves the right to change these Terms of Use at any time by posting new Terms of Use at this location. You can send e-mail to CyberCity 3D, Inc. with any questions relating to these Terms of Use at info@cybercity3d.com.
 
 Overview
 --------
