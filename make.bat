@@ -77,6 +77,8 @@ if errorlevel 9009 (
 
 if "%1" == "html" (
 	%SPHINXBUILD% -b html %ALLSPHINXOPTS% %BUILDDIR%
+	rem echo. 2>.nojekyll
+	type nul >%BUILDDIR%/.nojekyll
 	rem %SPHINXBUILD% -b html %ALLSPHINXOPTS% %SHAREDIR%/html
 	if errorlevel 1 exit /b 1
 	echo.
