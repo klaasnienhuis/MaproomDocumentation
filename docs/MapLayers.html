@@ -1,0 +1,480 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Map Layers &mdash; Maproom 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Maproom 1.0 documentation" href="index.html"/>
+        <link rel="next" title="Map Helpers" href="MapHelpers.html"/>
+        <link rel="prev" title="Map Presets" href="MapPresets.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Maproom
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="BasicConcepts.html">Basic Concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BasicConcepts.html#map-data">Map data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BasicConcepts.html#layers">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BasicConcepts.html#space">Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BasicConcepts.html#location">Location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BasicConcepts.html#projection">Projection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BasicConcepts.html#zoomlevel">Zoomlevel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="MapPresets.html">Map Presets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="MapPresets.html#satellite">Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MapPresets.html#satellite-and-terrain">Satellite and Terrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MapPresets.html#osm">OSM</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Map Layers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#building-maps-and-updating-them">Building maps and updating them</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#multiple-layers-in-one-map">Multiple layers in one map</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="MapHelpers.html">Map Helpers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Space.html">Map Space</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Space.html#location">Location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Space.html#find-location">Find location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Space.html#projection">Projection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Space.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Space.html#changing-the-location">Changing the location</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tools.html">Map Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Tools.html#export-map">Export map</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Location.html">Location</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Location.html#offset">Offset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Location.html#area">Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Location.html#push">Push</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Height.html">Height</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Height.html#srtm">SRTM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Height.html#mesh-density">Mesh density</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Stylesheet.html">Stylesheet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Stylesheet.html#system-and-user-styles">System and user styles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Stylesheet.html#create-a-style">Create a style</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Stylesheet.html#mass">Mass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Stylesheet.html#stroke">Stroke</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Stylesheet.html#fill">Fill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Stylesheet.html#skip">Skip</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Stylesheet.html#video">Video</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Installation.html#add-a-button-on-a-toolbar">Add a button on a toolbar</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Settings.html">Settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Settings.html#repository">Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Settings.html#map-api-key">Map API key</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Settings.html#mapbox">Mapbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Settings.html#bing">Bing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Settings.html#stylesheets">Stylesheets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Settings.html#license">License</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Settings.html#feature-comparison">Feature comparison</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Settings.html#updating">Updating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Settings.html#units">Units</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Version.html">Version requirement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="History.html">History</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="History.html#id2">0.0.25</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="History.html#new-features">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="History.html#fixed">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="History.html#id3">0.0.21</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="History.html#id4">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="History.html#improved">Improved</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="History.html#id5">0.0.20</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="History.html#id6">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="History.html#id7">Improved</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="History.html#id8">0.0.16</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="History.html#id9">New features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="History.html#id10">Improved</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="History.html#id11">0.0.14</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="History.html#id12">New features</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="History.html#id13">0.0.13</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="History.html#id14">Improved</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="History.html#id15">0.0.12</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="History.html#id16">New features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="History.html#id17">Improved</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="History.html#id18">0.0.10</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="History.html#id19">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="History.html#id20">0.0.9</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="History.html#id21">New features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="History.html#id22">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="History.html#id23">0.0.6</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="History.html#updated">Updated</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="History.html#id24">0.0.5</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="History.html#id25">New features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="History.html#id26">Updated</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="History.html#id27">0.0.4</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="About.html">About</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Map layer types</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="layers/Satellite.html">Satellite</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="layers/Satellite.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Satellite.html#interface">Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="layers/Satellite.html#image-source">Image source</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Satellite.html#zoom">Zoom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Satellite.html#estimate-zoom">Estimate zoom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Satellite.html#copyright">Copyright</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Satellite.html#api-keys">API keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Satellite.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="layers/Satellite.html#using-a-raster-source-in-a-map">Using a raster source in a map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layers/Satellite.html#adding-heights-to-a-map">Adding heights to a map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layers/Satellite.html#terrain-heights">Terrain heights</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="layers/Ripple.html">Ripple</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="layers/Ripple.html#two-locations">Two locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Ripple.html#multiple-maps">Multiple maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Ripple.html#render-resolution">Render resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Ripple.html#camera-animation">Camera animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Ripple.html#overlap">Overlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Ripple.html#z-gap">Z gap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Ripple.html#static-maps">Static maps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="layers/Openstreetmap.html">Openstreetmap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="layers/Openstreetmap.html#query">Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Openstreetmap.html#full-osm">Full OSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Openstreetmap.html#layer">Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Openstreetmap.html#key-value">Key/Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Openstreetmap.html#from-file">From file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Openstreetmap.html#terrain">Terrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Openstreetmap.html#stylesheet">Stylesheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="layers/Shapefile.html">Shapefile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="layers/Shapefile.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="layers/KML.html">KML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="layers/CC3D.html">CyberCity 3D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="layers/CC3D.html#available-buildings">Available buildings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/CC3D.html#premium-content">Premium content</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="layers/CC3D.html#off-the-shelf-buildings-1-km2-minimum">Off the shelf buildings, 1 km2 minimum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layers/CC3D.html#new-buildings-2-km2-minimum">New buildings, 2 km2 minimum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layers/CC3D.html#terms-of-use-for-the-cybercity-3d-content">Terms of use for the CyberCity 3D content</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="layers/CC3D.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="layers/CC3D.html#adding-buildings-to-a-map">Adding buildings to a map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layers/CC3D.html#building-repository">Building repository</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="layers/CC3D.html#the-cybercity-3d-library">The CyberCity 3D library</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="layers/CC3D.html#ordering-cc3d-buildings">Ordering CC3D buildings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="layers/CC3D.html#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="layers/Measure.html">Measure path</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="layers/Measure.html#but-it-works-in-google-maps">But it works in Google Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Measure.html#measure-great-circle-distances">Measure great circle distances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Measure.html#use-your-own">Use your own</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/Measure.html#example-champs-elysees">Example: Champs-Elysees</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul class="simple">
+</ul>
+<p class="caption"><span class="caption-text">Map projection</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mapprojection/Introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapprojection/Mercator.html">Mercator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapprojection/UTM.html">UTM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapprojection/EquidistantCylindrical.html">Equidistant Cylindrical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapprojection/CylindricEqualArea.html">Cylindric Equal Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapprojection/Mollweide.html">Mollweide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapprojection/KavrayskiyVII.html">Kavrayskiy VII</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapprojection/GallStereographic.html">Gall Stereographic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mapprojection/Mercator.html">Mercator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapprojection/UTM.html">UTM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapprojection/EquidistantCylindrical.html">Equidistant Cylindrical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapprojection/CylindricEqualArea.html">Cylindric Equal Area</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapprojection/Mollweide.html">Mollweide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapprojection/KavrayskiyVII.html">Kavrayskiy VII</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapprojection/GallStereographic.html">Gall Stereographic</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Testing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="testing/mxs.html">Testing MaxScript</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="testing/mxs.html#test-instructions">Test instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing/mxs.html#manual-check">Manual check</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="testing/CS.html">Testing .NET</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="testing/CS.html#test-instructions">Test instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing/CS.html#manual-check">Manual check</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Maproom</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Map Layers</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/MapLayers.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="map-layers">
+<span id="id1"></span><h1>Map Layers<a class="headerlink" href="#map-layers" title="Permalink to this headline">¶</a></h1>
+<p>A single map can have one or more map layers. You can use the same type of layers or mix different types together. For instance use two openstreetmap layers, one with buildings and the other one with roads. Or use a map with a satellite layer and an osm layer. Each layer can be offset <a class="footnote-reference" href="#id4" id="id2">[1]</a> individually. When stacking multiple layers in a map, you need to take care of the z-fighting. Map layers by default are placed on the ground plane. You can push <a class="footnote-reference" href="#id5" id="id3">[2]</a> maplayers to the front or to the back to get the right order in the map.</p>
+<p>Check out the different types of layers you can use here <a class="reference internal" href="index.html#layers-toc"><span>Map layer types</span></a>.</p>
+<div class="section" id="building-maps-and-updating-them">
+<span id="updating-map-layers"></span><h2>Building maps and updating them<a class="headerlink" href="#building-maps-and-updating-them" title="Permalink to this headline">¶</a></h2>
+<p>Generally you build a map by creating a maplayer, specifying the data you want to use and pressing the &#8220;build&#8221; or &#8220;update&#8221; button. Maproom will then get the data for you and make map geometry in your scene. Obviously the first map is never the final map and you need to update the map a few times. For instance change the zoomlevel on a terrain map, add heights, change the openstreetmap data. In addition to these changes you also can change the location of the map and the size of the area.</p>
+<p>Maproom does not update your maps in real time. If you make any of these changes you have to press the &#8220;build&#8221; or &#8220;update&#8221; button again and the map is updated. To help you with this, Maproom will indicate if there are changes which need to be pushed to the map.</p>
+<div class="figure">
+<img alt="_images/MPR_2015-09-26_1636_cr.png" src="_images/MPR_2015-09-26_1636_cr.png" />
+</div>
+<p>The basic state of a satellite map layer.</p>
+<div class="figure">
+<img alt="_images/MPR_2015-09-26_1637_cr.png" src="_images/MPR_2015-09-26_1637_cr.png" />
+</div>
+<p>The zoomlevel has changed. The yellow border appears to indicate a change has been made and the &#8220;Update map images&#8221; button is highlighted. Press this button to apply these changes and update the map.</p>
+<div class="figure">
+<img alt="_images/MPR_2015-09-26_1638_cr.png" src="_images/MPR_2015-09-26_1638_cr.png" />
+</div>
+<p>The area of the map has been altered. The yellow border indicates the location settings have changed and the &#8220;Update map images&#8221; button is highlighted. Press this button to update the map.</p>
+<p>If you don&#8217;t update the map and close Maproom, some changes will be reset and other changes will be remembered. In general: changes to the location (area, offset, push) are sticky. If you close Maproom and open it, the yellow border reappears to indicate you should update the map. Map layer changes (image source, zoom, terrain heights) are not sticky. If you close and open Maproom, any changes which have not been applied, will be forgotten.</p>
+</div>
+<div class="section" id="multiple-layers-in-one-map">
+<h2>Multiple layers in one map<a class="headerlink" href="#multiple-layers-in-one-map" title="Permalink to this headline">¶</a></h2>
+<p>Having multiple layers of different types in a single map is very powerful. It&#8217;s easy to add an extra layer. Each layer has its own location controls.</p>
+<div class="figure">
+<img alt="_images/MPR_2015-09-10_1607.png" src="_images/MPR_2015-09-10_1607.png" />
+</div>
+<p>Start with a new map. Press &#8220;Add a new layer...&#8221;</p>
+<div class="figure">
+<img alt="_images/MPR_2015-09-10_1608.png" src="_images/MPR_2015-09-10_1608.png" />
+</div>
+<p>Pick a new layer type</p>
+<div class="figure">
+<img alt="_images/MPR_2015-09-10_1609.png" src="_images/MPR_2015-09-10_1609.png" />
+</div>
+<p>The new layer has been added</p>
+<div class="figure">
+<img alt="_images/MPR_2015-09-10_1606.png" src="_images/MPR_2015-09-10_1606.png" />
+</div>
+<p>Example: a satellite and shapefile layer</p>
+<p class="rubric">Footnotes</p>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td>More about offset here: <a class="reference internal" href="Location.html#location-offset"><span>Offset</span></a>.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td>More about push here: <a class="reference internal" href="Location.html#location-push"><span>Push</span></a>.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="MapHelpers.html" class="btn btn-neutral float-right" title="Map Helpers" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="MapPresets.html" class="btn btn-neutral" title="Map Presets" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Klaas Nienhuis.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
