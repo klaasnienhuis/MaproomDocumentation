@@ -1,0 +1,475 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Measure path &mdash; Maproom 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Maproom 1.0 documentation" href="../index.html"/>
+        <link rel="next" title="Introduction" href="../mapprojection/Introduction.html"/>
+        <link rel="prev" title="CyberCity 3D" href="CC3D.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> Maproom
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../BasicConcepts.html">Basic Concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../BasicConcepts.html#map-data">Map data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BasicConcepts.html#layers">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BasicConcepts.html#space">Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BasicConcepts.html#location">Location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BasicConcepts.html#projection">Projection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BasicConcepts.html#zoomlevel">Zoomlevel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../MapPresets.html">Map Presets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../MapPresets.html#satellite">Satellite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MapPresets.html#satellite-and-terrain">Satellite and Terrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MapPresets.html#osm">OSM</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../MapLayers.html">Map Layers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../MapLayers.html#building-maps-and-updating-them">Building maps and updating them</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MapLayers.html#multiple-layers-in-one-map">Multiple layers in one map</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../MapHelpers.html">Map Helpers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Space.html">Map Space</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Space.html#location">Location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Space.html#find-location">Find location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Space.html#projection">Projection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Space.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Space.html#changing-the-location">Changing the location</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Tools.html">Map Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tools.html#export-map">Export map</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Location.html">Location</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Location.html#offset">Offset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Location.html#area">Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Location.html#push">Push</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Height.html">Height</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Height.html#srtm">SRTM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Height.html#mesh-density">Mesh density</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Stylesheet.html">Stylesheet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Stylesheet.html#system-and-user-styles">System and user styles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Stylesheet.html#create-a-style">Create a style</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Stylesheet.html#mass">Mass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Stylesheet.html#stroke">Stroke</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Stylesheet.html#fill">Fill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Stylesheet.html#skip">Skip</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Stylesheet.html#video">Video</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Installation.html#add-a-button-on-a-toolbar">Add a button on a toolbar</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Settings.html">Settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Settings.html#repository">Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Settings.html#map-api-key">Map API key</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Settings.html#mapbox">Mapbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Settings.html#bing">Bing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Settings.html#stylesheets">Stylesheets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Settings.html#license">License</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Settings.html#feature-comparison">Feature comparison</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Settings.html#updating">Updating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Settings.html#units">Units</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Version.html">Version requirement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../History.html">History</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../History.html#id2">0.0.25</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../History.html#new-features">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../History.html#fixed">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../History.html#id3">0.0.21</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../History.html#id4">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../History.html#improved">Improved</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../History.html#id5">0.0.20</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../History.html#id6">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../History.html#id7">Improved</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../History.html#id8">0.0.16</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../History.html#id9">New features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../History.html#id10">Improved</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../History.html#id11">0.0.14</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../History.html#id12">New features</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../History.html#id13">0.0.13</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../History.html#id14">Improved</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../History.html#id15">0.0.12</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../History.html#id16">New features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../History.html#id17">Improved</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../History.html#id18">0.0.10</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../History.html#id19">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../History.html#id20">0.0.9</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../History.html#id21">New features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../History.html#id22">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../History.html#id23">0.0.6</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../History.html#updated">Updated</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../History.html#id24">0.0.5</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../History.html#id25">New features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../History.html#id26">Updated</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../History.html#id27">0.0.4</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../About.html">About</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Map layer types</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Satellite.html">Satellite</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Satellite.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Satellite.html#interface">Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Satellite.html#image-source">Image source</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Satellite.html#zoom">Zoom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Satellite.html#estimate-zoom">Estimate zoom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Satellite.html#copyright">Copyright</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Satellite.html#api-keys">API keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Satellite.html#procedures">Procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Satellite.html#using-a-raster-source-in-a-map">Using a raster source in a map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Satellite.html#adding-heights-to-a-map">Adding heights to a map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Satellite.html#terrain-heights">Terrain heights</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Ripple.html">Ripple</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Ripple.html#two-locations">Two locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ripple.html#multiple-maps">Multiple maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ripple.html#render-resolution">Render resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ripple.html#camera-animation">Camera animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ripple.html#overlap">Overlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ripple.html#z-gap">Z gap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ripple.html#static-maps">Static maps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Openstreetmap.html">Openstreetmap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Openstreetmap.html#query">Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Openstreetmap.html#full-osm">Full OSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Openstreetmap.html#layer">Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Openstreetmap.html#key-value">Key/Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Openstreetmap.html#from-file">From file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Openstreetmap.html#terrain">Terrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Openstreetmap.html#stylesheet">Stylesheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Shapefile.html">Shapefile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Shapefile.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="KML.html">KML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CC3D.html">CyberCity 3D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CC3D.html#available-buildings">Available buildings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CC3D.html#premium-content">Premium content</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CC3D.html#off-the-shelf-buildings">Off the shelf buildings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CC3D.html#new-buildings-2-km2-minimum">New buildings, 2 km2 minimum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CC3D.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CC3D.html#adding-buildings-to-a-map">Adding buildings to a map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CC3D.html#building-repository">Building repository</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CC3D.html#the-cybercity-3d-library">The CyberCity 3D library</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CC3D.html#ordering-cc3d-buildings">Ordering CC3D buildings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CC3D.html#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Measure path</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#but-it-works-in-google-maps">But it works in Google Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#measure-great-circle-distances">Measure great circle distances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#use-your-own">Use your own</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-champs-elysees">Example: Champs-Elysees</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul class="simple">
+</ul>
+<p class="caption"><span class="caption-text">Map projection</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../mapprojection/Introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mapprojection/Mercator.html">Mercator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mapprojection/UTM.html">UTM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mapprojection/EquidistantCylindrical.html">Equidistant Cylindrical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mapprojection/CylindricEqualArea.html">Cylindric Equal Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mapprojection/Mollweide.html">Mollweide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mapprojection/KavrayskiyVII.html">Kavrayskiy VII</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mapprojection/GallStereographic.html">Gall Stereographic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapprojection/Mercator.html">Mercator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapprojection/UTM.html">UTM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapprojection/EquidistantCylindrical.html">Equidistant Cylindrical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapprojection/CylindricEqualArea.html">Cylindric Equal Area</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapprojection/Mollweide.html">Mollweide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapprojection/KavrayskiyVII.html">Kavrayskiy VII</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapprojection/GallStereographic.html">Gall Stereographic</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Testing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../testing/mxs.html">Testing MaxScript</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing/mxs.html#test-instructions">Test instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/mxs.html#manual-check">Manual check</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/CS.html">Testing .NET</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing/CS.html#test-instructions">Test instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing/CS.html#manual-check">Manual check</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Maproom</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Measure path</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/layers/Measure.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="measure-path">
+<span id="id1"></span><h1>Measure path<a class="headerlink" href="#measure-path" title="Permalink to this headline">¶</a></h1>
+<p>Measuring distances on a map seems easy and straightforward. Just put a ruler on the map (or in 3ds Max: a tape measure helper) and read the length. The contrary is actually true. Since a flat map is an unwrapped sphere, taking two points on that flat map and getting the distance between them doesn&#8217;t tell you a whole lot. That&#8217;s because the flat map is quite distorted in several ways.</p>
+<p>The shortest distance between two points on earth lies on the Great Circle between those points. It&#8217;s easiest to visualize a great circle as a circle on the globe where the center of the circle passes through the center of the earth. A great circle is a straight line on the globe, but it usually isn&#8217;t on a flat map. this also depends on the map projection.</p>
+<p>There are also plenty of map projections where seemingly equal distances between points are actually different. In a mercator projection (used by most online maps) measuring the same distance on a flat map at the equator and at a higher latitude gives you different great circle distances.</p>
+<div class="figure">
+<img alt="../_images/Mercator_measurement.jpg" src="../_images/Mercator_measurement.jpg" />
+</div>
+<p>The same length on the map gives wildly different distances on the globe</p>
+<div class="section" id="but-it-works-in-google-maps">
+<h2>But it works in Google Maps<a class="headerlink" href="#but-it-works-in-google-maps" title="Permalink to this headline">¶</a></h2>
+<p>You can easily measure distances in google maps. Just rightlick on a map and pick <code class="docutils literal"><span class="pre">Measure</span> <span class="pre">distance</span></code>. It will give you accurte, real world distances. Nothing of that projection mumbo jumbo. Why can google make this work and 3dsMax not? Actually, when measuring the distances in google map, the actual distance on the map isn&#8217;t measured. In the background your line on the map is converted to a great circle and calculated on the fly.</p>
+</div>
+<div class="section" id="measure-great-circle-distances">
+<h2>Measure great circle distances<a class="headerlink" href="#measure-great-circle-distances" title="Permalink to this headline">¶</a></h2>
+<p>To reliably measure distances you should use the <code class="docutils literal"><span class="pre">Measure</span> <span class="pre">Path</span></code> map layer. This map layer gives you the length of the shape used to measure. By default it comes with a shape but you can replace it with your own shape. When pressing the <code class="docutils literal"><span class="pre">Update</span> <span class="pre">lengths</span></code> button, Maproom will calculate the length of the shape. You can use a shape with any number of points and the shape can be curved or straight.</p>
+</div>
+<div class="section" id="use-your-own">
+<h2>Use your own<a class="headerlink" href="#use-your-own" title="Permalink to this headline">¶</a></h2>
+<p>By default this map layer come with a shape called <code class="docutils literal"><span class="pre">measure</span> <span class="pre">path</span></code>. It is a child of the map helper. If you want to use your own measure path, you can unlink or delete the default shape and link your own shape.</p>
+</div>
+<div class="section" id="example-champs-elysees">
+<h2>Example: Champs-Elysees<a class="headerlink" href="#example-champs-elysees" title="Permalink to this headline">¶</a></h2>
+<p>The Champs-Elysees is nice and straght. When measured in google it&#8217;s about 2.13 km long. Let&#8217;s try to get that measurement in 3dsMax with Maproom as well.</p>
+<div class="figure">
+<img alt="../_images/MPR_2016-06-28_2079.png" src="../_images/MPR_2016-06-28_2079.png" />
+</div>
+<p>The Champs-Elysees is 2.13 km long</p>
+<p>Make a new satellite map layer and center it around the Champs-Elysees in Paris. After building the map add a new <code class="docutils literal"><span class="pre">Measure</span> <span class="pre">path</span></code> layer. Draw a line along the Champs-Elysees and add that line as a child to the map helper of the <code class="docutils literal"><span class="pre">Measure</span> <span class="pre">path</span></code> layer (get rid of the original child line). In Maproom press <code class="docutils literal"><span class="pre">Update</span> <span class="pre">lengths</span></code>. You&#8217;ll see the length on the globe is about 2.13 km but the length on the map is about 3.22 km. That&#8217;s exactly the same length of the line when you look it up with the native 3dsMax measure utility.</p>
+<div class="figure">
+<img alt="../_images/MPR_2016-06-28_2080.png" src="../_images/MPR_2016-06-28_2080.png" />
+</div>
+<p>The Champs-Elysees in Maproom</p>
+<div class="figure">
+<img alt="../_images/MPR_2016-06-28_2081.png" src="../_images/MPR_2016-06-28_2081.png" />
+</div>
+<p>Using the <code class="docutils literal"><span class="pre">Measure</span> <span class="pre">path</span></code> tool we can measure the line. It&#8217;s 2.12 km on the globe (or in real world) but it&#8217;s 3.22 km on the map.</p>
+<div class="figure">
+<img alt="../_images/MPR_2016-06-28_2082.png" src="../_images/MPR_2016-06-28_2082.png" />
+</div>
+<p>With the 3dsMax measure tool we see the line is also 3.22 km.</p>
+<p>Now make exactly the same map but switch the map projection to UTM. Also add a <code class="docutils literal"><span class="pre">Measure</span> <span class="pre">path</span></code> map layer and measure the Champs-Elysees. Again you should see the same length on the globe, about 2.13 km. But now the length on the map is about the same. This means that for smaller areas, the UTM map projection gives very accurate results. This should be the projection of choice when working with maps and CAD data for instance.</p>
+<div class="figure">
+<img alt="../_images/MPR_2016-06-28_2083.png" src="../_images/MPR_2016-06-28_2083.png" />
+</div>
+<p>The Champs-Elysees in Maproom, in utm projection</p>
+<div class="figure">
+<img alt="../_images/MPR_2016-06-28_2084.png" src="../_images/MPR_2016-06-28_2084.png" />
+</div>
+<p>Using the <code class="docutils literal"><span class="pre">Measure</span> <span class="pre">path</span></code> tool we can measure the line. It&#8217;s 2.12 km on the globe (or in real world) and it&#8217;s the same on the map.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../mapprojection/Introduction.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="CC3D.html" class="btn btn-neutral" title="CyberCity 3D" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Klaas Nienhuis.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
