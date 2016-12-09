@@ -120,11 +120,25 @@ If you need to make manual adjustments to your repository, you can press the ``O
 The CyberCity 3D library
 ------------------------
 
-The second section of the map layer shows you the CC3D library. It contains outlines of all available building CC3D has in their library. This makes it easy to evaluate if they have buildings you can use right now in your projects. Just pick a city from the list and press ``Show selected`` and an outline is placed in your map. You can also press ``Show all`` to see each available area in your map.
+The second section of the map layer shows you the CC3D library. It contains outlines of all available building CC3D has in their library. This makes it easy to evaluate if they have buildings you can use right now in your projects. 
+
+Download outlines
+^^^^^^^^^^^^^^^^^
+
+Before you can view the outlines, you need to download an install them. Don't worry, it's all automatic and doesn't take more than a few seconds. Open the CC3D Library list and pick the ``Download CyberCity 3D coverage outlines`` option. The outlines are downloaded and placed in the repository. You can re-download the files whenever you want.
+
+Use outlines
+^^^^^^^^^^^^
+
+Pick a city from the list and press ``Show selected`` and an outline is placed in your map. You can also press ``Show all`` to see each available area in your map.
 
 .. figure:: ..\_images\MPR_2016-12-02_2211.png
 
 *A sample of the available buildings*
+
+.. figure:: ..\_images\MPR_2016-12-09_2221.png
+
+*Lots of coverage in and around Los Angeles*
 
 Ordering CC3D buildings
 ^^^^^^^^^^^^^^^^^^^^^^^
