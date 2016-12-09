@@ -3,7 +3,7 @@ CyberCity 3D
 
 .. note:: The CyberCity 3D feature is not included yet.
 
-A CyberCity 3D layer adds low resolution 3D buildings to your map. These buildings are created by `CyberCity 3D <http://www.cybercity3d.com/>`_ (CC3D) based on aerial photography. The buildings are lightweight but have accurate roof shapes and building shapes. They don't have facade detail or textures. This makes them perfect for visualisations on a city scale.
+A CyberCity 3D layer adds low resolution 3D buildings to your map. These buildings are created by `CyberCity 3D <http://www.cybercity3d.com/>`_ (CC3D) based on aerial photography. The buildings are lightweight but have accurate roof shapes and building shapes. They don't have facade detail or textures. This makes them perfect for visualisations on a city scale. All CyberCity 3D buildings are precisely constructed with up to 4 inch accuracy to reflect real world dimensions from the roof down.
 
 .. figure:: ..\_images\cc3d_amsterdam_overview.jpg
 
@@ -32,6 +32,13 @@ New buildings, 2 km2 minimum
 Terms of use for the CyberCity 3D content
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+When you first open a cyberCity 3D map layer you are greeted by a notification. It draws your attention to the terms and conditions related to the CC3D data. The toc are laid out below. You need to agree with these terms to be able to use the CC3D data.
+
+.. figure:: ..\_images\MPR_2016-12-09_2216.png
+
+*The toc notification*
+
+
 These "Terms of Use" set forth the terms and conditions that apply to your use of CyberCity 3D, Inc. 3D building models (the "data"). By using the data, you agree to comply with all of the Terms of Use set forth herein. The right to use the data is personal to you and is not transferable to any other person or entity.
 
 **Copyrights and Trademarks**
@@ -48,27 +55,50 @@ Overview
 
 When you want to use CC3D buildings in a map, you can either use the CyberCity3D map preset to start a new map, or add a CyberCity3D layer to an existing map. A CC3D layer has two sections. The first section deals with the CC3D buildings you already own. The second section shows you the areas available through CC3D and it also enables you to order CC3D buildings directly.
 
-.. figure:: ..\_images\MPR_2016-12-02_2210.png
+.. figure:: ..\_images\MPR_2016-12-09_2217.png
 
 *Two sections: My CyberCity 3D models and the CyberCity 3D library*
+
+Sample data
+^^^^^^^^^^^
+
+After you've agreed to the terms you're greeted by yet another notification (I know, I'm sorry about this...). CyberCity 3D has made three sample areas of their data available to use in Maproom, for free! Even if you're a user of the free version of Maproom, you can use this data and evaluate it.
+
+If you want this data, press the ``Get this data now`` button. It takes you to the settings page where you can request the sample data. More on that here: :ref:`sampledata`.
+
+.. figure:: ..\_images\MPR_2016-12-09_2215.png
+
+*The sample data notification*
+
+Once you've downloaded the sample data, you need to "install" these zipfiles into your repository: :ref:`cc3drepo`
 
 Adding buildings to a map
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Let's assume you already have buildings purchased and placed in the repository you can select it from the list and add them to the map by pressing the ``Place selected`` button. As with all other map layers, an area of the data is added to your map. If you have an area of 5 by 5 km of buildings and you set the area of your map layer to 1 by 1 km, only the smaller area will be added to your map. This reduces waiting times if you only need a smaller part of your buildings as importing many buildigns takes a bit of time.
+Let's assume you already have buildings purchased and installed in the repository you can select them from the list and add them to the map by pressing the ``Place selected`` button. As with all other map layers, an area of the data is added to your map. If you have an area of 5 by 5 km of buildings and you set the area of your map layer to 1 by 1 km, only the smaller section will be added to your map. This reduces waiting times if you only need a smaller part of your buildings as importing many buildigns takes a bit of time.
 
-Each building is placed geographically accurate and it's also projected in the current map projection. This means that if my map space is set to a location in London and I add buildings from New York these buildings will appear quite far away in 3dsMax. 3dsMax will not like this as it has a hard time dealing with large distances (between London and New York) and high accuracy (the 3D buildings are very accurate) at the same time. Make sure that if you're placing New York buildings your map space is also set to New York or somewhere near.
+Each building is placed geographically accurate and it's also projected in the current map projection. This means that if the map space is set to a location in London and I add buildings from New York these buildings will appear quite far away in 3dsMax. 3dsMax will not like this as it has a hard time dealing with large distances (between London and New York) and high accuracy (the 3D buildings are very accurate) at the same time. Make sure that if you're placing New York buildings your map space is also set to New York or somewhere near.
+
+.. _cc3drepo:
 
 Building repository
 ^^^^^^^^^^^^^^^^^^^
 
-In you've just ordered and received buildings from CC3D, you need to place them into your repository. To do this, press the ``Open...`` button in the ``My CyberCity 3D models`` section. This opens your repository. Then navigate to the ``Purchased``. In there you can make a new folder with a descriptive name of the area you've bought, for instance ``Amsterdam, trainstation area``. In that folder you need to make two more folders, one called ``model``, the other called ``outline``. You can unzip your models in the ``model`` folder. The zip you've received from CC3D should contain two folders and a file: ``dae_images`` (usually empty), ``dae_models`` (contains a list of collada files, the actual 3D models) and a csv file. If you've received an outline, you need to put that in the folder ``outline`` you've just created yourself. The outline is a shapefile which actually consists of a bunch of files, one of which has an extension ``.shp``. Just place all of the files you've gotten in this folder.
+The building repository is the place to put your CC3D buildings. Once placed there, Maproom is able to use them in maps. If you've just downloaded buildings from CC3D, you need to install them into your repository. Whether you're using the free sample data, or a purchased area, the procedure is the same.
 
-When you restart Maproom and create a CC3D map layer, your new'y added folder will appear in your models list.
+.. figure:: ..\_images\MPR_2016-12-09_2217_A.png
 
-.. figure:: ..\_images\MPR_2016-12-02_2209.png
+*Install new CC3D models in your repository. Press* ``Add new model...``
 
-*The resulting folder structure of a single area of CC3D buildings*
+.. figure:: ..\_images\MPR_2016-12-09_2218.png
+
+*Pick a zip file you've received from CC3D*
+
+.. figure:: ..\_images\MPR_2016-12-09_2219.png
+
+*The data is placed in your repository and ready to use*
+
+If you need to make manual adjustments to your repository, you can press the ``Open...`` button. Keep in mind that Maproom relies on a strict folder structure with naming conventions. 
 
 The CyberCity 3D library
 ------------------------
@@ -93,11 +123,11 @@ Here's an example which shows how you can combine CC3D buildings with openstreet
 
 .. figure:: ..\_images\cc3d_chicago_center_osm.jpg
 
-*Chicago inner city in extruded openstreetmap buildings. OSM contains quite a bit of accurate height information which is used by the stylesheet to extrude the buildings to the correct height*
+*Chicago inner city in extruded openstreetmap buildings. OSM contains some height information in dense urban areas which is used by the stylesheet to extrue the buildings to the correct height.*
 
 .. figure:: ..\_images\cc3d_chicago_center_cc3d.jpg
 
-*The same area with buildings from CC3D*
+*The same area with buildings from CC3D. All CyberCity 3D buildings are precisely constructed with up to 4 inch accuracy to reflect real world dimensions from the roof down.*
 
 .. figure:: ..\_images\cc3d_chicago_close_osm.jpg
 
