@@ -59,10 +59,16 @@ When you want to use CC3D buildings in a map, you can either use the CyberCity3D
 
 *Two sections: My CyberCity 3D models and the CyberCity 3D library*
 
+.. _cc3dsampledata:
+
 Sample data
 ^^^^^^^^^^^
 
 After you've agreed to the terms you're greeted by yet another notification (I know, I'm sorry about this...). CyberCity 3D has made three sample areas of their data available to use in Maproom, for free! Even if you're a user of the free version of Maproom, you can use this data and evaluate it.
+
+.. figure:: ..\_images\London_CC3D_sample_001.jpg
+
+*The London Leicester Square sample data*
 
 If you want this data, press the ``Get this data now`` button. It takes you to the settings page where you can request the sample data. More on that here: :ref:`sampledata`.
 
@@ -72,9 +78,6 @@ If you want this data, press the ``Get this data now`` button. It takes you to t
 
 Once you've downloaded the sample data, you need to "install" these zipfiles into your repository: :ref:`cc3drepo`
 
-.. figure:: ..\_images\London_CC3D_sample_001.jpg
-
-*The London Leicester Square sample data*
 
 Adding buildings to a map
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -126,7 +129,7 @@ The second section of the map layer shows you the CC3D library. It contains outl
 Ordering CC3D buildings
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-You order CC3D buildings directly from CC3D. The order and payment is arranged through CC3d, but Maproom provides a handy method of placing the order. Questions about CC3D data can be sent to info@cybercity3d.com. You can also taka a look on their website first: `CyberCity 3D <http://www.cybercity3d.com/>`_
+You order CC3D buildings directly from CC3D. The order and payment is arranged through CC3d, but Maproom provides a handy method of placing the order. Questions about CC3D data can be sent directly to info@cybercity3d.com. You can also taka a look on their website first: `CyberCity 3D <http://www.cybercity3d.com/>`_. I suggest you also try out the free sample data first to get a feel for the CC3D buildings: :ref:`cc3dsampledata`
 
 .. figure:: ..\_images\MPR_2016-12-09_2217_C.png
 
@@ -134,9 +137,9 @@ You order CC3D buildings directly from CC3D. The order and payment is arranged t
 
 There are two ways you can order: either order one of the available cities entirely or order a custom area. A custom area can either be part of an existing city, a new area or a combination of both. Keep in mind the minimum order area is 1 square kilometer. Orders of existing cities can be provided promptly. Orders of new areas take processing time by CC3D. 
 
-You can specify the custom area by creating a closed shape, select it and press ``Order custom area``. It helps if you first create a satellite map of the area you're interested in and then draw on top of that. 
+You can specify the custom area by creating a closed shape, select it and press ``Order custom area``. It helps if you first create a satellite map of the area you're interested in and then draw your shape on top of that. 
 
-Either way, using an existing city or custom outline, the area is sent to CC3D and you'll receive a confirmation email of your order. CC3D will further process your order and get in touch with you. They also might slightly modify the outline of your area to avoid split buildings. Payment is also arranged directly with CC3D.
+Either way, using an existing city or custom outline, the area is sent to CC3D and you'll receive a confirmation email of your order. CC3D will further process your order and get in touch with you. They also might slightly modify the outline of your area to avoid split buildings. Usually they use the centerlines of roads as borders. Payment is also arranged directly with CC3D.
 
 Example
 -------
