@@ -72,10 +72,24 @@ If you want this data, press the ``Get this data now`` button. It takes you to t
 
 Once you've downloaded the sample data, you need to "install" these zipfiles into your repository: :ref:`cc3drepo`
 
+.. figure:: ..\_images\London_CC3D_sample_001.jpg
+
+*The London Leicester Square sample data*
+
 Adding buildings to a map
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Let's assume you already have buildings purchased and installed in the repository you can select them from the list and add them to the map by pressing the ``Place selected`` button. As with all other map layers, an area of the data is added to your map. If you have an area of 5 by 5 km of buildings and you set the area of your map layer to 1 by 1 km, only the smaller section will be added to your map. This reduces waiting times if you only need a smaller part of your buildings as importing many buildigns takes a bit of time.
+Once buildings have been installed in the repository you can select them from the list and add them to the map by pressing the ``Place selected`` button. As with all other map layers, an area of the data is added to your map. If you have an area of 5 by 5 km of buildings and you set the area of your map layer to 1 by 1 km, only the smaller section will be added to your map. This reduces waiting times if you only need a smaller part of your buildings as importing many buildigns takes a bit of time.
+
+You can preview the space your buildings take up by first placing an outline on your map. This is a quick way to plan your map without having to wait on the import of hundreds of buildings. Pick a model from the dropdown and press ``Show selected`` to place the outline on the map. You can also use ``Show all`` to load the outlines of each area in your repository.
+
+.. figure:: ..\_images\MPR_2016-12-09_2217_B.png
+
+*Use outlines to plan your maps*
+
+.. figure:: ..\_images\MPR_2016-12-09_2220.png
+
+*The London Leicester Square sample outline*
 
 Each building is placed geographically accurate and it's also projected in the current map projection. This means that if the map space is set to a location in London and I add buildings from New York these buildings will appear quite far away in 3dsMax. 3dsMax will not like this as it has a hard time dealing with large distances (between London and New York) and high accuracy (the 3D buildings are very accurate) at the same time. Make sure that if you're placing New York buildings your map space is also set to New York or somewhere near.
 
@@ -112,9 +126,17 @@ The second section of the map layer shows you the CC3D library. It contains outl
 Ordering CC3D buildings
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-You order CC3D buildings directly from them CC3D. There are two ways you can order: either order one of the available cities or order a custom area. A custom area can either be part of an existing city, a new area or a combination of both. You can specify the custom area by creating a closed shape, select it and press ``Order custom area``. It helps if you first create a satellite map of the area you're interested in and then draw on top of that. 
+You order CC3D buildings directly from CC3D. The order and payment is arranged through CC3d, but Maproom provides a handy method of placing the order. Questions about CC3D data can be sent to info@cybercity3d.com. You can also taka a look on their website first: `CyberCity 3D <http://www.cybercity3d.com/>`_
 
-Either way, using an existing city or custom outline, the area is sent to CC3D and you'll receive a confirmation email of your order. CC3D will further process your order and get in touch with you. They also might modify the outline of your area to avoid split buildings. Payment is also arranged directly with CC3D.
+.. figure:: ..\_images\MPR_2016-12-09_2217_C.png
+
+*Ordering CC3D data with Maproom*
+
+There are two ways you can order: either order one of the available cities entirely or order a custom area. A custom area can either be part of an existing city, a new area or a combination of both. Keep in mind the minimum order area is 1 square kilometer. Orders of existing cities can be provided promptly. Orders of new areas take processing time by CC3D. 
+
+You can specify the custom area by creating a closed shape, select it and press ``Order custom area``. It helps if you first create a satellite map of the area you're interested in and then draw on top of that. 
+
+Either way, using an existing city or custom outline, the area is sent to CC3D and you'll receive a confirmation email of your order. CC3D will further process your order and get in touch with you. They also might slightly modify the outline of your area to avoid split buildings. Payment is also arranged directly with CC3D.
 
 Example
 -------
@@ -123,7 +145,7 @@ Here's an example which shows how you can combine CC3D buildings with openstreet
 
 .. figure:: ..\_images\cc3d_chicago_center_osm.jpg
 
-*Chicago inner city in extruded openstreetmap buildings. OSM contains some height information in dense urban areas which is used by the stylesheet to extrue the buildings to the correct height.*
+*Chicago inner city in extruded openstreetmap buildings. OSM contains some height information in dense urban areas which is used by the stylesheet to extrude the buildings to the correct height.*
 
 .. figure:: ..\_images\cc3d_chicago_center_cc3d.jpg
 
