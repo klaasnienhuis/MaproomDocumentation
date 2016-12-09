@@ -17,7 +17,7 @@ CC3D has over 1.25 million buildings available in over 90 cities. Their focus is
 Premium content
 ---------------
 
-The CC3D buildings are premium content. You can order the buildings through Maproom and orders are processed by CC3D themselves. Maproom let's you easily integrate these buildings in your maps. CC3D charges for their buildings per square kilometer. Once you've purchased an area, you can use this in as many maps as you like.
+The CC3D buildings are premium content. You can order the buildings through Maproom and orders are processed by CC3D themselves. Maproom lets you easily integrate these buildings in your maps. CC3D charges for their buildings per square kilometer. Once you've purchased an area, you can use this in as many maps as you like.
 
 Off the shelf buildings, 1 km2 minimum
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -149,7 +149,7 @@ You order CC3D buildings directly from CC3D. The order and payment is arranged t
 
 *Ordering CC3D data with Maproom*
 
-There are two ways you can order: either order one of the available cities entirely or order a custom area. A custom area can either be part of an existing city, a new area or a combination of both. Keep in mind the minimum order area is 1 square kilometer. Orders of existing cities can be provided promptly. Orders of new areas take processing time by CC3D. 
+There are two ways you can order: either order one of the available cities entirely or order a custom area. A custom area can either be part of an existing city, a new area or a combination of both. Keep in mind the minimum order area is 1 square kilometer for existing areas and 2 square kilometer for new areas. Orders of existing cities can be provided promptly. Orders of new areas take processing time by CC3D. 
 
 You can specify the custom area by creating a closed shape, select it and press ``Order custom area``. It helps if you first create a satellite map of the area you're interested in and then draw your shape on top of that. 
 
