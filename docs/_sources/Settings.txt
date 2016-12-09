@@ -132,6 +132,17 @@ If there's an update available there's also a button available. Press it to down
 
 *An overview of the available update. Press the button to install it.*
 
+.. _sampledata:
+
+Sample data
+-----------
+
+Maproom comes with sample data courtesy of their respective owners. Currently you can request three sample areas of CyberCity 3D buildings. Enter your email address and press the ``Request...`` button. A link to the data will be emailed to you together with a tutorial on how to work with it.
+
+.. image:: _images\MPR_2016-12-09_2213.png
+
+*Request sample data*
+
 .. _units:
 
 Units
