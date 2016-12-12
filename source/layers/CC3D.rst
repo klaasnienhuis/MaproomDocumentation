@@ -8,6 +8,11 @@ A CyberCity 3D layer adds low resolution 3D buildings to your map. These buildin
 
 *Amsterdam central station and the inner city on the foreground with CyberCity 3D buildings. In the background you can see extruded openstreetmap buildings. None of these buildings have been hand modeled.*
 
+.. raw:: html
+
+		<iframe width="700" height="394" src="https://www.youtube.com/embed/_-arLoGjOM4?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
 Available buildings
 -------------------
 
