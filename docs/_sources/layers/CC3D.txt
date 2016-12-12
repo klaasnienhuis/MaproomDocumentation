@@ -1,9 +1,8 @@
 CyberCity 3D
 ============
 
-.. note:: The CyberCity 3D feature is not included yet.
-
 A CyberCity 3D layer adds low resolution 3D buildings to your map. These buildings are created by `CyberCity 3D <http://www.cybercity3d.com/>`_ (CC3D) based on aerial photography. The buildings are lightweight but have accurate roof shapes and building shapes. They don't have facade detail or textures. This makes them perfect for visualisations on a city scale. All CyberCity 3D buildings are precisely constructed with up to 4 inch accuracy to reflect real world dimensions from the roof down.
+
 
 .. figure:: ..\_images\cc3d_amsterdam_overview.jpg
 
@@ -18,6 +17,8 @@ Premium content
 ---------------
 
 The CC3D buildings are premium content. You can order the buildings through Maproom and orders are processed by CC3D themselves. Maproom lets you easily integrate these buildings in your maps. CC3D charges for their buildings per square kilometer. Once you've purchased an area, you can use this in as many maps as you like.
+
+.. note:: CyberCity 3D data is a Pro feature. Purchased models cannot be used in the free version of Maproom. 
 
 Off the shelf buildings, 1 km2 minimum
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
