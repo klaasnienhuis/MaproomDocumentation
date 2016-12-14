@@ -27,6 +27,8 @@ It’s easy to order 3D buildings through Maproom. CyberCity 3D will then proces
 * Off-the-Shelf Buildings, 1 km :sup:`2` minimum, $400/km :sup:`2`
 * New Build, 2 km :sup:`2` minimum, $1,800/km :sup:`2`
 
+.. _cc3dterms:
+
 CyberCity 3D Content Terms of Use
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
