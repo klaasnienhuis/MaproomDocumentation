@@ -144,6 +144,8 @@ Choose a city from the list and press ``Show selected``. An outline of that city
 
 *CC3D library coverage in and around Los Angeles, CA*
 
+.. _cc3dordering:
+
 Ordering CC3D buildings
 -----------------------
 
