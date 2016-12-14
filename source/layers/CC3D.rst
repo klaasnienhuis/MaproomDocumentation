@@ -36,7 +36,7 @@ CyberCity 3D, Inc. building data is copyrighted. To utilize CC3D data, you must 
 
 .. figure:: ..\_images\MPR_2016-12-09_2216.png
 
-*The toc notification*
+*The notification*
 
 **Terms of Use**
 
@@ -169,7 +169,7 @@ Existing library cities can be downloaded immediately. New build cities or areas
 Specifying your custom area
 
 #. Create a satellite map of the area you need
-#. Draw a reactangle or custom closed shape or spline on the map detailing the area you need
+#. Draw a rectangle or custom closed shape or spline on the map detailing the area you need
 #. Select the shape
 #. Press ``Order custom area``
 
