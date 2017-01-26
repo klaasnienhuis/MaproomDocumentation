@@ -1,3 +1,5 @@
+.. _layer-satellite:
+
 Satellite
 =========
 

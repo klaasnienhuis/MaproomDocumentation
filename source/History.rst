@@ -3,6 +3,23 @@
 History
 =======
 
+50
+--
+
+New Features
+^^^^^^^^^^^^
+
+- **Cybercity3D**: build 3D cities with amazing detail :ref:`cc3d`
+- **Cybercity3D map presets**: both Maproom free and pro have access to thre new map presets with satellite images, openstreetmap and sample CC3D data, :ref:`preset-demo`
+- **Mapzen and Mapbox terrain**: zoomable terrain heights to replace the static SRTM datasets :ref:`height`
+
+Improved
+^^^^^^^^
+
+- Downloaded map images now have unique names. This makes it easier to manage the textures
+- Fixed Mercator projection of raster data. they now come in as sharp as they should be.
+- Interpolate raster images when using map projections. Makes for smoother maps.
+
 0.0.25
 ------
 

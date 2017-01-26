@@ -42,4 +42,29 @@ Manhattan
 
 .. figure:: _images\MPR_2015-09-08_1593.png
 
+.. _preset-demo:
+
+Demo presets
+------------
+
+There are three demo presets, available in Maproom Pro and Free. These are ``Demo New York``, ``Demo London`` and ``Demo Miami``. These three presets contain a satellite, openstreetmap and cyberCity 3D layer. The location and size of each preset is fixed, but you can experiment all you want with the different layers. 
 The *osm* preset default settings
+
+.. figure:: _images\MPR_2017-01-26_2270.png
+
+*The Demo presets, also available in Maproom Free*
+
+For the description of each maplayer check :ref:`cc3d`, :ref:`layer-osm` and :ref:`layer-satellite` . To work with the cyberCity 3D data you first need to download the free sample data, it's very easy: :ref:`cc3dsampledata`. Once you have it you can make maps exactly like these. These have been created with the Demo map presets.
+
+.. figure:: _images\Maproom_CyberCity3D_London_small.jpg
+
+*London Demo preset*
+
+.. figure:: _images\Maproom_CyberCity3D_Miami_small.jpg
+
+*Miami Demo preset*
+
+.. figure:: _images\Maproom_CyberCity3D_NewYork_small.jpg
+
+*New York Demo preset*
+

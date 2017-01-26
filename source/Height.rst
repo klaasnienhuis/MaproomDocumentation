@@ -11,8 +11,6 @@ You can add terrain heights to a satellite map by picking one of the two items f
 
 *The terrain height section*
 
-.. todo:: Replace Terrain heights video.
-
 .. raw:: html
 
 	<iframe width="700" height="525" src="https://www.youtube.com/embed/ZFcteTIk_GU" frameborder="0" allowfullscreen></iframe>

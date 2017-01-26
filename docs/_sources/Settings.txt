@@ -74,7 +74,9 @@ Stylesheets are .ini files used to convert shapes into geometry based on a set o
 License
 -------
 
-By default Maproom comes with a free license. You're able to create good looking image based maps with the free version. If you'd like to build bigger maps and use terrain heights, openstreetmap, shapefiles and more you can purchase a pro license. The pro license is node locked. The license is tied to the PC you request the license from. During the beta you can request a beta license. 
+By default Maproom comes with a free license. You're able to create good looking image based maps with the free version. If you'd like to build bigger maps and use terrain heights, openstreetmap, shapefiles and more you can purchase a pro license. The pro license is node locked. The license is tied to a single PC. You can purchase a pro license in the shop.
+
+.. todo:: Update purchasing and license request process video.
 
 .. raw:: html
 
@@ -82,38 +84,22 @@ By default Maproom comes with a free license. You're able to create good looking
 		
 *Get a free beta license*
 
-Previously the license came to you as a file you'd have to install. The current system works with your email address and a plain text token. You get the token by email and you have to fill in the token and your email address in the corresponding fields in Maproom.
+The system works with your email address and a plain text product key. You get the product key by email after the purchase has been processed. In the License tab of the Settings panel presse the little pencil icon and paste your product key. Press the green checkmark icon and finally the ``Activate product key...`` button. This will activate your pro license and tie it to the PC you're working on. You'll need to restart Maproom for the new key to take effect.
 
-In the License tab of the Settings panel, enter your email address and press ``Request beta license``. The request is sent to the server and you'll get a confirmation email. I'm still manually verifying each request, so you won't get your license immediately. Don't request multiple license fromthe same machine, it makes no sense and it won't get you your license any faster.
+If you buy multiple keys in one go, you get multiple product keys. You can activate each key on a different machine.
 
-.. image:: _images\MPR_2016-10-01_2133_cr1.png
+.. image:: _images\MPR_2017-01-26_2268.png
 
-*Send your license request from here*
+*Press the little pencil icon to enter the product key*
 
-.. image:: _images\MPR_2016-10-01_2138.png
+.. image:: _images\MPR_2017-01-26_2269.png
 
-*Your license request has been recieved*
-
-.. image:: _images\MPR_2016-10-01_2139.png
-
-*There's probably already a license in place for this machine. Please be patient while I process it.*
-
-When you recieve the email with the credentials, you need to fill in your email and token. Press the "Edit" button next to the text field, paste the email and token and press the "OK" button.
-
-.. image:: _images\MPR_2016-10-01_2135.png
-
-*Press the little pencil icon to unlock the text field*
-
-.. image:: _images\MPR_2016-10-01_2136.png
-
-*Press the green checkmark to store your credentials*
-
-Once you've filled in your credentials you need to restart Maproom for the new license to take effect.
+*Paste in your product key, press the green checkmark and press* ``Activate product key...``
 
 Feature comparison
 ^^^^^^^^^^^^^^^^^^
 
-The pro license will contain all features covered here in the documentation. During the beta some features might not be completely functional or temporarily disabled. These will be introduced gradually. The free license allows you to build maps with the Mapbox and OSMMapnik image sources. You can make maps of 1K size. Due to the nature of these maps you can zoom to any portion of the world though the maximum texturesize will be 1024x1024 pixels. The free license isn't able to generate terrain heights or process vector data such as openstreetmap or shapefiles.
+The pro license will contain all features covered here in the documentation. The free license allows you to build maps with the Mapbox and OSMMapnik image sources. You can make maps of 1K size. Due to the nature of these maps you can zoom to any portion of the world though the maximum texturesize will be 2048*2048 pixels. The free license isn't able to generate terrain heights or process vector data such as openstreetmap or shapefiles. an exception are the Demo presets which are also available in Maproom Free: :ref:`preset-demo`.
 
 .. _updating:
 
