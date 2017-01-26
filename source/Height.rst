@@ -19,8 +19,6 @@ You can add terrain heights to a satellite map by picking one of the two items f
 	
 *Using terrain heights on multiple scales*
 
-.. _srtm3:
-
 Terrain resolution
 ------------------
 
