@@ -8,7 +8,7 @@ Repository
 
 Maproom uses map data from outside sources. This data is cached to make editing your maps more responsive. The repository distinguishes between a cache and a session. 
 
-A cache contains the raw data downloaded from a provider **if** it's reusable. Currently this covers the raster tiles, such as tiles from mapbox and mapquest and height data such as SRTM3 and ETOPO5. A separate cache is built for each tile provider and zoomlevel. If I make a map based on the same tiles (location, provider and zoomlevel) twice, tiles aren't downloaded but taken from the cache. This improves speed a lot.
+A cache contains the raw data downloaded from a provider **if** it's reusable. Currently this covers the raster tiles, such as tiles from mapbox and mapquest and height data mapbox and mapzen. A separate cache is built for each tile provider and zoomlevel. If I make a map based on the same tiles (location, provider and zoomlevel) twice, tiles aren't downloaded but taken from the cache. This improves speed a lot.
 
 A session is a location where sources are stored for each map created which can't be recycled. when creating a map based on raster tiles, these tiles are downloaded or taken from the cache and stiched into a single map image. The tiles can be reused in other maps, but this stiched image probably can't. That image is stored in a session folder in the repository. This also applies to openstreetmap data. It's currently not feasible to use a cached version. Each new openstreetmap layer means a new chunk of data is downloaded.
 

@@ -115,7 +115,8 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Height</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#srtm">SRTM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#terrain-resolution">Terrain resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#source-data">Source data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mesh-density">Mesh density</a></li>
 </ul>
 </li>
@@ -361,37 +362,55 @@
             
   <div class="section" id="height">
 <span id="id1"></span><h1>Height<a class="headerlink" href="#height" title="Permalink to this headline">¶</a></h1>
-<p>Heights can be loaded into a map based on data sources as well. There are several global data sources of which SRTM3 is currently available in Maproom. You can load SRTM3 data in a terrain layer by picking it from the <code class="docutils literal"><span class="pre">Terrain</span> <span class="pre">heights</span></code> dropdown.</p>
+<p>Heights can be loaded into a map based on data sources as well. Previously (until January 2017) there were two static datasets: SRTM3 and SRTM1. Currently there are two dynamic datasets provided by Mapbox and Mapzen. The new elevation data has zoomlevels which means you can get terrain heights for any map size: from city to continent.</p>
+<p>You can add terrain heights to a satellite map by picking one of the two items from the <code class="docutils literal"><span class="pre">Terrain</span> <span class="pre">heights</span></code> dropdown. Pick a zoomlevel or use the <code class="docutils literal"><span class="pre">Estimate</span> <span class="pre">zoomlevel</span></code> button. Make sure you have a valid API key entered for Mapbox or Mapzen. Read more about API keys here: <a class="reference internal" href="Settings.html#mapapikey"><span>Map API key</span></a></p>
 <div class="figure">
-<img alt="_images/MPR_2016-10-03_2140.png" src="_images/MPR_2016-10-03_2140.png" />
+<img alt="_images\MPR_2017-01-26_2264.png" src="_images\MPR_2017-01-26_2264.png" />
 </div>
-<p><em>An overview of the available terrain height datasets</em></p>
-<iframe width="700" height="525" src="https://www.youtube.com/embed/lyZ5c4itN9Y" frameborder="0" allowfullscreen></iframe><p><em>Adding heights to OSM data</em></p>
-<div class="section" id="srtm">
-<span id="srtm3"></span><h2>SRTM<a class="headerlink" href="#srtm" title="Permalink to this headline">¶</a></h2>
-<p>SRTM is a near global dataset captured by a space shuttle. The resolution or SRTM3 is 3 arc-sec which is about 90m per pixel. SRTM1 is about 1 arc-sec which amounts to roughly 30m per pixel. <a class="reference external" href="http://www.webgis.com/srtm3.html">You can read more about this here</a></p>
+<p><em>The terrain height section</em></p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Replace Terrain heights video.</p>
+</div>
+<iframe width="700" height="525" src="https://www.youtube.com/embed/ZFcteTIk_GU" frameborder="0" allowfullscreen></iframe><p><em>Using terrain heights on multiple scales</em></p>
+<div class="section" id="terrain-resolution">
+<span id="srtm3"></span><h2>Terrain resolution<a class="headerlink" href="#terrain-resolution" title="Permalink to this headline">¶</a></h2>
+<p>Similar to the regular image sources for satellite maps, the terrain resolution can be altered by changing the zoomlevel. You can specify the zoomlevel of the terrain heights separately from the map images. It also means you can overdo it by picking a zoom level which is too high, meaning long waits and long processing times. The terrain heights are packed into a 16 bit displacement map, they can get heavy!</p>
+<p>The huge advantage of the new terrain heights over the SRTM datasets is that they can be zoomed. This means you can make a map with terrain heights at large or small scales: continents and cities. The highest zoomlevel of both the Mapbox and Mapzen data is based on SRTM though. They go to zoomlevel 14 or 15.</p>
+<p>Here&#8217;s a series of images of Port-au-Prince rendered at 1200px with Mapbox light map images and Mapzen terrain heights. The terrain heights have been exhaggerated in the larger scale images. You can do this yourself by changing the displacement value on the map object in the scene. The default height is 65 when working in km.</p>
 <div class="figure">
-<img alt="_images/Continent_def.jpg" src="_images/Continent_def.jpg" />
+<img alt="_images\5000km_6x.png" src="_images\5000km_6x.png" />
 </div>
-<p><em>An overview of SRTM coverage</em></p>
-<p>This resolution makes SRTM3 very suitable for medium sized terrains ranging from 500 km to 50 km. This translates to a terrain height map of about 5000 to 500 pixels. It will work just fine on smaller areas but you&#8217;ll see the data lacks resolution. By default the terrain height map is made smooth but if you switch off the filtering you can see the individual samples. SRTM1 has a resolution of about 9 times as high. This works better for smaller areas.</p>
+<p><em>5000*5000 km, heights multiplied 6 times</em></p>
 <div class="figure">
-<img alt="_images/SRTM3Sample_250km.jpg" src="_images/SRTM3Sample_250km.jpg" />
+<img alt="_images\1500km_3x.png" src="_images\1500km_3x.png" />
 </div>
-<p><em>SRTM3: A 250 km area with a terrain map of about 2700*2700 pixels</em></p>
+<p><em>1500*1500 km, heights multiplied 3 times</em></p>
 <div class="figure">
-<img alt="_images/SRTM3Sample_50km.jpg" src="_images/SRTM3Sample_50km.jpg" />
+<img alt="_images\0400km_2x.png" src="_images\0400km_2x.png" />
 </div>
-<p><em>SRTM3: A 50 km area with a terrain map of about 550*500 pixels</em></p>
+<p><em>400*400 km, heights multiplied 2 times</em></p>
 <div class="figure">
-<img alt="_images/SRTM3Sample_5km.jpg" src="_images/SRTM3Sample_5km.jpg" />
+<img alt="_images\0100km_1x.png" src="_images\0100km_1x.png" />
 </div>
-<p><em>SRTM3: A 5 km area with a terrain map of 53*53 pixels</em></p>
+<p><em>100*100 km, actual heights</em></p>
 <div class="figure">
-<img alt="_images/SRTM3Sample_5km_unfiltered.jpg" src="_images/SRTM3Sample_5km_unfiltered.jpg" />
+<img alt="_images\0025km_1x.png" src="_images\0025km_1x.png" />
 </div>
-<p><em>SRTM3: The same 5 km area with an unfiltered height map</em></p>
-<p>In the last image you can clearly see the individual height samples.</p>
+<p><em>25*25 km, actual heights</em></p>
+<div class="figure">
+<img alt="_images\0005km_1x.png" src="_images\0005km_1x.png" />
+</div>
+<p><em>5*5 km, actual heights. This is about the maximum detail you can get out of the terrain heights.</em></p>
+<p>Each map uses a displacement map of about 1300 pixels regardless of the size of the map in km. As long as you pick an appropriate zoomlevel, loading a new displacement map shouldn&#8217;t take much time.</p>
+<p>The following attributions are for the above images</p>
+<p>©Mapbox ©OpenStreetMap <a class="reference external" href="https://www.mapbox.com/about/maps/">https://www.mapbox.com/about/maps/</a>, Improve this map <a class="reference external" href="https://www.mapbox.com/map-feedback/">https://www.mapbox.com/map-feedback/</a></p>
+<p>Mapzen terrain tiles contain 3DEP, SRTM, and GMTED2010 content courtesy of the U.S. Geological Survey and ETOPO1 content courtesy of U.S. National Oceanic and Atmospheric Administration. The fine print: <a class="reference external" href="https://mapzen.com/documentation/terrain-tiles/attribution/#the-fine-print">https://mapzen.com/documentation/terrain-tiles/attribution/#the-fine-print</a></p>
+</div>
+<div class="section" id="source-data">
+<h2>Source data<a class="headerlink" href="#source-data" title="Permalink to this headline">¶</a></h2>
+<p>Both Mapbox and Mapzen use publicly available data in their terrain heights. Mapzen also includes bathymetry (stuff underneath the sea surface). In the examples it&#8217;s visible that the resolution of the bathymetry is different than the detail on land. For instance the image of the 400*400 km area has sharp mountains on the island and dull elevation at sea.</p>
+<p><a class="reference external" href="https://mapzen.com/documentation/terrain-tiles/data-sources/">Here&#8217;s info on what data Mapzen uses</a>. <a class="reference external" href="https://www.mapbox.com/about/maps/">And here&#8217;s what Mapbox uses</a>. You need to scroll down a bit to the Mapbox terrain section.</p>
 </div>
 <div class="section" id="mesh-density">
 <h2>Mesh density<a class="headerlink" href="#mesh-density" title="Permalink to this headline">¶</a></h2>
@@ -412,18 +431,6 @@
 <p><em>Terrain mesh density: 25</em></p>
 <div class="figure">
 <img alt="_images/MPR_Etna_SRTM1_40.jpg" src="_images/MPR_Etna_SRTM1_40.jpg" />
-</div>
-<p><em>Terrain mesh density: 40</em></p>
-<div class="figure">
-<img alt="_images/MPR_Etna_SRTM1_10_wire.jpg" src="_images/MPR_Etna_SRTM1_10_wire.jpg" />
-</div>
-<p><em>Terrain mesh density: 10</em></p>
-<div class="figure">
-<img alt="_images/MPR_Etna_SRTM1_25_wire.jpg" src="_images/MPR_Etna_SRTM1_25_wire.jpg" />
-</div>
-<p><em>Terrain mesh density: 25</em></p>
-<div class="figure">
-<img alt="_images/MPR_Etna_SRTM1_40_wire.jpg" src="_images/MPR_Etna_SRTM1_40_wire.jpg" />
 </div>
 <p><em>Terrain mesh density: 40</em></p>
 </div>

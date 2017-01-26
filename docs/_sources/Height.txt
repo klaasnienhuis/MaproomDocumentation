@@ -3,48 +3,71 @@
 Height
 ======
 
-Heights can be loaded into a map based on data sources as well. There are several global data sources of which SRTM3 is currently available in Maproom. You can load SRTM3 data in a terrain layer by picking it from the ``Terrain heights`` dropdown.
+Heights can be loaded into a map based on data sources as well. Previously (until January 2017) there were two static datasets: SRTM3 and SRTM1. Currently there are two dynamic datasets provided by Mapbox and Mapzen. The new elevation data has zoomlevels which means you can get terrain heights for any map size: from city to continent.
 
-.. figure:: _images\MPR_2016-10-03_2140.png
+You can add terrain heights to a satellite map by picking one of the two items from the ``Terrain heights`` dropdown. Pick a zoomlevel or use the ``Estimate zoomlevel`` button. Make sure you have a valid API key entered for Mapbox or Mapzen. Read more about API keys here: :ref:`mapapikey`
 
-*An overview of the available terrain height datasets*
+.. figure:: _images\MPR_2017-01-26_2264.png
+
+*The terrain height section*
+
+.. todo:: Replace Terrain heights video.
 
 .. raw:: html
 
-	<iframe width="700" height="525" src="https://www.youtube.com/embed/lyZ5c4itN9Y" frameborder="0" allowfullscreen></iframe>
+	<iframe width="700" height="525" src="https://www.youtube.com/embed/ZFcteTIk_GU" frameborder="0" allowfullscreen></iframe>
 	
-*Adding heights to OSM data*
+*Using terrain heights on multiple scales*
 
 .. _srtm3:
 
-SRTM
-----
+Terrain resolution
+------------------
 
-SRTM is a near global dataset captured by a space shuttle. The resolution or SRTM3 is 3 arc-sec which is about 90m per pixel. SRTM1 is about 1 arc-sec which amounts to roughly 30m per pixel. `You can read more about this here <http://www.webgis.com/srtm3.html>`_
+Similar to the regular image sources for satellite maps, the terrain resolution can be altered by changing the zoomlevel. You can specify the zoomlevel of the terrain heights separately from the map images. It also means you can overdo it by picking a zoom level which is too high, meaning long waits and long processing times. The terrain heights are packed into a 16 bit displacement map, they can get heavy!
 
-.. figure:: _images\Continent_def.jpg
+The huge advantage of the new terrain heights over the SRTM datasets is that they can be zoomed. This means you can make a map with terrain heights at large or small scales: continents and cities. The highest zoomlevel of both the Mapbox and Mapzen data is based on SRTM though. They go to zoomlevel 14 or 15.
 
-*An overview of SRTM coverage*
+Here's a series of images of Port-au-Prince rendered at 1200px with Mapbox light map images and Mapzen terrain heights. The terrain heights have been exhaggerated in the larger scale images. You can do this yourself by changing the displacement value on the map object in the scene. The default height is 65 when working in km. 
 
-This resolution makes SRTM3 very suitable for medium sized terrains ranging from 500 km to 50 km. This translates to a terrain height map of about 5000 to 500 pixels. It will work just fine on smaller areas but you'll see the data lacks resolution. By default the terrain height map is made smooth but if you switch off the filtering you can see the individual samples. SRTM1 has a resolution of about 9 times as high. This works better for smaller areas.
+.. figure:: _images\5000km_6x.png
 
-.. figure:: _images\SRTM3Sample_250km.jpg
+*5000*5000 km, heights multiplied 6 times*
 
-*SRTM3: A 250 km area with a terrain map of about 2700*2700 pixels*
+.. figure:: _images\1500km_3x.png
 
-.. figure:: _images\SRTM3Sample_50km.jpg
+*1500*1500 km, heights multiplied 3 times*
 
-*SRTM3: A 50 km area with a terrain map of about 550*500 pixels*
+.. figure:: _images\0400km_2x.png
 
-.. figure:: _images\SRTM3Sample_5km.jpg
+*400*400 km, heights multiplied 2 times*
 
-*SRTM3: A 5 km area with a terrain map of 53*53 pixels*
+.. figure:: _images\0100km_1x.png
 
-.. figure:: _images\SRTM3Sample_5km_unfiltered.jpg
+*100*100 km, actual heights*
 
-*SRTM3: The same 5 km area with an unfiltered height map*
+.. figure:: _images\0025km_1x.png
 
-In the last image you can clearly see the individual height samples.
+*25*25 km, actual heights*
+
+.. figure:: _images\0005km_1x.png
+
+*5*5 km, actual heights. This is about the maximum detail you can get out of the terrain heights.*
+
+Each map uses a displacement map of about 1300 pixels regardless of the size of the map in km. As long as you pick an appropriate zoomlevel, loading a new displacement map shouldn't take much time.
+
+The following attributions are for the above images
+
+©Mapbox ©OpenStreetMap https://www.mapbox.com/about/maps/, Improve this map https://www.mapbox.com/map-feedback/
+
+Mapzen terrain tiles contain 3DEP, SRTM, and GMTED2010 content courtesy of the U.S. Geological Survey and ETOPO1 content courtesy of U.S. National Oceanic and Atmospheric Administration. The fine print: https://mapzen.com/documentation/terrain-tiles/attribution/#the-fine-print
+
+Source data
+-----------
+
+Both Mapbox and Mapzen use publicly available data in their terrain heights. Mapzen also includes bathymetry (stuff underneath the sea surface). In the examples it's visible that the resolution of the bathymetry is different than the detail on land. For instance the image of the 400*400 km area has sharp mountains on the island and dull elevation at sea.
+
+`Here's info on what data Mapzen uses <https://mapzen.com/documentation/terrain-tiles/data-sources/>`_. `And here's what Mapbox uses <https://www.mapbox.com/about/maps/>`_. You need to scroll down a bit to the Mapbox terrain section.
 
 Mesh density
 ------------
@@ -70,16 +93,3 @@ Here's a series of renders of the same terrain with increasing detail (i.e. decr
 .. figure:: _images\MPR_Etna_SRTM1_40.jpg
 
 *Terrain mesh density: 40*
-
-.. figure:: _images\MPR_Etna_SRTM1_10_wire.jpg
-
-*Terrain mesh density: 10*
-
-.. figure:: _images\MPR_Etna_SRTM1_25_wire.jpg
-
-*Terrain mesh density: 25*
-
-.. figure:: _images\MPR_Etna_SRTM1_40_wire.jpg
-
-*Terrain mesh density: 40*
-

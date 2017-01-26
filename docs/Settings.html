@@ -115,7 +115,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Height.html">Height</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Height.html#srtm">SRTM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Height.html#terrain-resolution">Terrain resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Height.html#source-data">Source data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Height.html#mesh-density">Mesh density</a></li>
 </ul>
 </li>
@@ -364,7 +365,7 @@
 <div class="section" id="repository">
 <span id="id1"></span><h2>Repository<a class="headerlink" href="#repository" title="Permalink to this headline">¶</a></h2>
 <p>Maproom uses map data from outside sources. This data is cached to make editing your maps more responsive. The repository distinguishes between a cache and a session.</p>
-<p>A cache contains the raw data downloaded from a provider <strong>if</strong> it&#8217;s reusable. Currently this covers the raster tiles, such as tiles from mapbox and mapquest and height data such as SRTM3 and ETOPO5. A separate cache is built for each tile provider and zoomlevel. If I make a map based on the same tiles (location, provider and zoomlevel) twice, tiles aren&#8217;t downloaded but taken from the cache. This improves speed a lot.</p>
+<p>A cache contains the raw data downloaded from a provider <strong>if</strong> it&#8217;s reusable. Currently this covers the raster tiles, such as tiles from mapbox and mapquest and height data mapbox and mapzen. A separate cache is built for each tile provider and zoomlevel. If I make a map based on the same tiles (location, provider and zoomlevel) twice, tiles aren&#8217;t downloaded but taken from the cache. This improves speed a lot.</p>
 <p>A session is a location where sources are stored for each map created which can&#8217;t be recycled. when creating a map based on raster tiles, these tiles are downloaded or taken from the cache and stiched into a single map image. The tiles can be reused in other maps, but this stiched image probably can&#8217;t. That image is stored in a session folder in the repository. This also applies to openstreetmap data. It&#8217;s currently not feasible to use a cached version. Each new openstreetmap layer means a new chunk of data is downloaded.</p>
 <p>Since the amount of data you&#8217;re downloading and caching can get quite large, put the repo where you&#8217;ve got the space.</p>
 <div class="admonition note">
