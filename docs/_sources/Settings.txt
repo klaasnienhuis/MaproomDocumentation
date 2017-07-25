@@ -74,7 +74,7 @@ Stylesheets are .ini files used to convert shapes into geometry based on a set o
 License
 -------
 
-By default Maproom comes with a free license. You're able to create good looking image based maps with the free version. If you'd like to build bigger maps and use terrain heights, openstreetmap, shapefiles and more you can purchase a pro license. The pro license is node locked. The license is tied to a single PC. You can purchase a pro license in the shop.
+By default Maproom comes with a free license. You're able to create good looking image based maps with the free version. If you'd like to build bigger maps and use terrain heights, openstreetmap, shapefiles and more you can purchase a pro license. You can purchase a pro license in `the shop. <https://www.klaasnienhuis.nl/product/maproom/>`_
 
 .. todo:: Update purchasing and license request process video.
 
@@ -84,17 +84,33 @@ By default Maproom comes with a free license. You're able to create good looking
 		
 *Get a free beta license*
 
-The system works with your email address and a plain text product key. You get the product key by email after the purchase has been processed. In the License tab of the Settings panel presse the little pencil icon and paste your product key. Press the green checkmark icon and finally the ``Activate product key...`` button. This will activate your pro license and tie it to the PC you're working on. You'll need to restart Maproom for the new key to take effect.
+Node locked
+^^^^^^^^^^^
+
+You can purchase node locked licenses in the shop. Each license can be used on one PC at a time. The system works with your email address and a plain text product key. You get the product key by email after the purchase has been processed. In the License tab of the Settings panel presse the little pencil icon and paste your product key. Press the green checkmark icon and finally the ``Activate product key...`` button. This will activate your pro license and tie it to the PC you're working on. You'll need to restart Maproom for the new key to take effect.
 
 If you buy multiple keys in one go, you get multiple product keys. You can activate each key on a different machine.
 
-.. image:: _images\MPR_2017-01-26_2268.png
+.. image:: _images\MPR_2017-07-25_2531.png
+
+*Open the license panel in the settings. By default it shows the node locked license options*
+
+.. image:: _images\MPR_2017-07-25_2535.png
 
 *Press the little pencil icon to enter the product key*
 
-.. image:: _images\MPR_2017-01-26_2269.png
+.. image:: _images\MPR_2017-07-25_2536.png
 
 *Paste in your product key, press the green checkmark and press* ``Activate product key...``
+
+After activating your product key, it's locked to this machine. Please restart Maproom for the licnese changes to take effect.
+
+You can also deactivate a product key. This means that you make the product key available to use on another machine. Press the ``decativate product key`` button. Once you do that, you're auotmatically switched to the free plan. Deactivating a license is convenient when you switch to a new PC for instance. The number of deactivations is limited per product key.
+
+Floating license
+^^^^^^^^^^^^^^^^
+
+It's possible to purchase a floating license for bulk orders. For example if you want to use Maproom in a teaching environment or a large studio with many seats. A floating license doesn't add extra functionality. For more details on floating licenses go here: :ref:`floatinglicense`.
 
 Feature comparison
 ^^^^^^^^^^^^^^^^^^

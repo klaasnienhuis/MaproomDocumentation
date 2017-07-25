@@ -53,7 +53,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Maproom'
-copyright = '2016, Klaas Nienhuis'
+copyright = '2017, Klaas Nienhuis'
 author = 'Klaas Nienhuis'
 
 # The version info for the project you're documenting, acts as replacement for
