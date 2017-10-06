@@ -1,7 +1,7 @@
+.. _floatoverview:
+
 Floating license overview
 =========================
-
-.. _floatoverview:
 
 A floating license works on a local network, such as an office or a university. Each PC (client) on the network has maproom installed. One PC (server) on the network has a license server installed. This server can supply licenses to multiple clients. When a client starts maproom, it leases a license from the server. When this client closes maproom, the leased license is returned to the server. 
 

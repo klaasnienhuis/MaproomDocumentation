@@ -10,7 +10,7 @@ New Features
 ^^^^^^^^^^^^
 
 - **Network license**: use a single license on multiple machines within a local network :ref:`floatoverview`
-- **KML**: kml import and export is now properly supported :ref:`KML`
+- **KML**: kml import and export is now properly supported :ref:`kml`
 
 Fixed
 ^^^^^

@@ -1,5 +1,8 @@
+.. _kml:
+
 KML
 ===
+
 
 KML is a fileformat used by Google Earth. When you draw paths and polygons in Google Earth you can save them as KML files. Maproom is able to read and write KML files. Though there are limitations, only closed and open shapes are supported at the moment.
 
