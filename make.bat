@@ -6,7 +6,6 @@ if "%SPHINXBUILD%" == "" (
 	set SPHINXBUILD=C:\Python34\Scripts\sphinx-build.exe
 )
 set BUILDDIR=docs
-set SHAREDIR=C:\Users\klaas\Dropbox\Public\Maxscript_documentation\Maproom
 set ALLSPHINXOPTS=-d %BUILDDIR%/doctrees %SPHINXOPTS% source
 set I18NSPHINXOPTS=%SPHINXOPTS% source
 if NOT "%PAPER%" == "" (
@@ -45,8 +44,6 @@ if "%1" == "help" (
 if "%1" == "clean" (
 	for /d %%i in (%BUILDDIR%\*) do rmdir /q /s %%i
 	del /q /s %BUILDDIR%\*
-	for /d %%i in (%SHAREDIR%\*) do rmdir /q /s %%i
-	del /q /s %SHAREDIR%\*
 	goto end
 )
 
@@ -79,7 +76,6 @@ if "%1" == "html" (
 	%SPHINXBUILD% -b html %ALLSPHINXOPTS% %BUILDDIR%
 	rem echo. 2>.nojekyll
 	type nul >%BUILDDIR%/.nojekyll
-	rem %SPHINXBUILD% -b html %ALLSPHINXOPTS% %SHAREDIR%/html
 	if errorlevel 1 exit /b 1
 	echo.
 	echo.Build finished. The HTML pages are in %BUILDDIR%.
