@@ -145,6 +145,86 @@ Maproom comes with sample data courtesy of their respective owners. Currently yo
 
 *Request sample data*
 
+.. _imagesource:
+
+Image source
+------------
+
+Image sources are the places where Maproom gets its satellite images and other map textures from. Maproom has built in image sources, such as Bing, Mapbox and Stamen. But there are a lot more image providers out there. The User Image sources section enables you to set up your own custom sources.
+
+An image source provides its images through a specific url template. This url template is used to download the map textures at any zoomlevel and from any location. Usually image providers follow a common pattern, but you still need to set up that url pattern. The pattern contains a few symbols. Here's an example:
+
+``http://api.tiles.mapbox.com/v4/{mapid}/{zoomlevel}/{tilex}/{tiley}.png?access_token={token}``
+
+The first part ``http://api.tiles.mapbox.com/v4/`` points to the Mapbox server. Then we have the symbols
+
+- ``{mapid}`` this is usually the type of map. For instance the Bing satellite maps has as mapid "Aerial" and the Stamen watercolor map has "watercolor". Sometimes you need to provide this, other times it can be left out.
+- ``{zoomlevel}`` this determines the zoomlevel of the images you're downloading. Every url needs this symbol.
+- ``{tilex}`` and ``{tiley}`` these are the tile coordinates being downloaded. Every url needs this symbol.
+- ``{token}`` some map providers require an access token. Others don't. Usually you can get an access token when you set up an account with the map provider.
+
+Image providers all use similar url's
+
+- ``http://sat.owm.io/sql/{zoomlevel}/{tilex}/{tiley}?appid={token}&op=rgb&from=s2&select=b4,b3,b2``
+- ``http://a.sm.mapstack.stamen.com/($d9da8e[@p],(mapbox-water,$60c9fe[source-in]))/{zoomlevel}/{tilex}/{tiley}.png``
+- ``https://maps1.aerisapi.com/{token}/{mapid}/{zoomlevel}/{tilex}/{tiley}/current.png``
+
+Sometimes the order of the symbols is different. Sometimes you don't need a token or a mapid. You don't need to guess these url's. Every map provider can tell you how these url's should look.
+
+Working with image sources
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Go to Settings > Image sources. There you see a dropdown with the custom image sources. Use the ``New``, ``Delete`` and ``Clone`` buttons to create or delete an image source. Use the ``Test`` button to test it once you've created one. The test will tell you if the image source has been set up properly. Give your image source a proper name and make sure it's unique. Fill in the url template, optionally the map id and token and the zoom limits. Make sure you add the attribution required by the map provider.
+
+.. note:: Content provided through the Maproom script is copyrighted by the respective owner. Check out the copyright, license and attribution conditions for each of these sources. The creator of this script does not claim ownership and can't provide a license for this content.
+
+.. image:: _images\\SPH_2018-02-03_2855.png
+
+*A user image source setup from Aeris Weather. Note the blurred out token. This provider needs you to make an account*
+
+Examples
+^^^^^^^^
+
+.. image:: _images\\reprojected_2cedb620-e778-4e6f-82e3-b2b669f77e55.png
+
+*Temperature forecast from Aeris Weather*
+
+.. image:: _images\\reprojected_8964b459-545a-406d-ac6e-e4609c7e64f5.png
+
+*Blue Marble from Aeris Weather*
+
+.. image:: _images\\reprojected_70212652-2228-4a4d-a8d3-743fb872e57e.png
+
+*Clouds from Aeris Weather*
+
+.. image:: _images\\SPH_2018-02-03_2860.png
+
+*Clouds and Blue marble combined*
+
+.. image:: _images\\reprojected_d49c0b98-c4ca-415a-892e-770140108e9c.png
+
+*A style from Mapstack by Stamen*
+
+.. image:: _images\\reprojected_e2e9e11a-8e98-4c1d-bd25-198220841041.png
+
+*Another style from Mapstack by Stamen*
+
+Where to get these
+^^^^^^^^^^^^^^^^^^
+
+There are many places you can get access to custom styles. Some of these are freely accessible, for others you need a free token, others are commercial.
+
+- `Mabbox studio <https://www.mapbox.com/mapbox-studio>`_
+- `Aeris weather <https://www.aerisweather.com/support/docs/aeris-maps/reference/map-layers/>`_
+- `Openweathermap <http://openweathermap.org/api/weathermaps>`_
+- `Vane <http://owm.io/sql-viewer?lat=38.87&lon=-121.47&zoom=10&select=red,green,blue&op=rgb&from=cloudless>`_
+- `Mapstack <http://mapstack.stamen.com/>`_
+- `Thunderforest <http://www.thunderforest.com>`_
+- `Here <https://developer.here.com/documentation/map-tile/topics/overview.html>`_
+- `Planet <https://www.planet.com/>`_
+- `DigitalGlobe <https://www.digitalglobe.com/products/digitalglobe-basemap>`_
+
+
 .. _units:
 
 Units

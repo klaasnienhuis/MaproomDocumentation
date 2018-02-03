@@ -206,7 +206,7 @@
             
   <div class="section" id="license-server">
 <h1>License server<a class="headerlink" href="#license-server" title="Permalink to this headline">¶</a></h1>
-<p>The license server is a small application. It can run on a separate machine on the network or on one of the clients. However, it needs to be always on to lease out licenses. The license server is started and stopped by command line. You need to run the command line as administrator. I’ve found that it also needs to run on a local disk, not a network share. There can be only one floating license per network.</p>
+<p>The license server is a small application. It can run on a separate machine on the network or on one of the clients. However, it needs to be always on to lease out licenses. The license server is started and stopped by command line. You need to run the command line as administrator. I’ve found that it also needs to run on a local disk, not a network share. There can be only one floating license server per network.</p>
 <p>When you get a floating license, you receive a single product key similar to a node locked key. But in this case the single product key represents a number of floating licenses.</p>
 <p>First you need to activate the license server with the product key. This means you authenticate yourself with me. Once the license server has been activated it can be started. From that moment on clients can lease licenses. There’s no authentication between the client and the server. The client asks for a lease. If it’s there, the server hands it over. No questions asked!</p>
 <p>I’ve created a few convenient bat-files to operate the server. They require a few files to be present in the same folder as the bat-files:</p>

@@ -1,7 +1,7 @@
 License server
 ==============
 
-The license server is a small application. It can run on a separate machine on the network or on one of the clients. However, it needs to be always on to lease out licenses. The license server is started and stopped by command line. You need to run the command line as administrator. I've found that it also needs to run on a local disk, not a network share. There can be only one floating license per network.
+The license server is a small application. It can run on a separate machine on the network or on one of the clients. However, it needs to be always on to lease out licenses. The license server is started and stopped by command line. You need to run the command line as administrator. I've found that it also needs to run on a local disk, not a network share. There can be only one floating license server per network.
 
 When you get a floating license, you receive a single product key similar to a node locked key. But in this case the single product key represents a number of floating licenses.
 
