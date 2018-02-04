@@ -121,6 +121,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#image-source">Image source</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#working-with-image-sources">Working with image sources</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mapstack-tutorial">Mapstack Tutorial</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#where-to-get-these">Where to get these</a></li>
 </ul>
 </li>
@@ -331,6 +332,10 @@
 <li><code class="docutils literal"><span class="pre">https://maps1.aerisapi.com/{token}/{mapid}/{zoomlevel}/{tilex}/{tiley}/current.png</span></code></li>
 </ul>
 <p>Sometimes the order of the symbols is different. Sometimes you don’t need a token or a mapid. You don’t need to guess these url’s. Every map provider can tell you how these url’s should look.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Even though it’s technically possible to add a certain image source, this doesn’t mean you’re allowed to. ArcGis for instance has beautiful image sources, easily accessible. But it’s only allowed to use them in software by ESRI. Google maps would also be pretty cool to use, however you’ll have to pay a hefty license fee to do so. Always keep the terms and conditions in mind.</p>
+</div>
 <div class="section" id="working-with-image-sources">
 <h3>Working with image sources<a class="headerlink" href="#working-with-image-sources" title="Permalink to this headline">¶</a></h3>
 <p>Go to Settings &gt; Image sources. There you see a dropdown with the custom image sources. Use the <code class="docutils literal"><span class="pre">New</span></code>, <code class="docutils literal"><span class="pre">Delete</span></code> and <code class="docutils literal"><span class="pre">Clone</span></code> buttons to create or delete an image source. Use the <code class="docutils literal"><span class="pre">Test</span></code> button to test it once you’ve created one. The test will tell you if the image source has been set up properly. Give your image source a proper name and make sure it’s unique. Fill in the url template, optionally the map id and token and the zoom limits. Make sure you add the attribution required by the map provider.</p>
@@ -356,6 +361,17 @@
 <img alt="_images/reprojected_e2e9e11a-8e98-4c1d-bd25-198220841041.png" src="_images/reprojected_e2e9e11a-8e98-4c1d-bd25-198220841041.png" />
 <p><em>Another style from Mapstack by Stamen</em></p>
 </div>
+<div class="section" id="mapstack-tutorial">
+<h3>Mapstack Tutorial<a class="headerlink" href="#mapstack-tutorial" title="Permalink to this headline">¶</a></h3>
+<p>Here’s how to get the correct url from Mapstack. First go to <a class="reference external" href="http://mapstack.stamen.com/">Mapstack</a> and then press the “Try it” button. Fiddle with the map layers and settings. It’s best just to try it for a bit and create a style you like. Once you’re satisfied, in the map on the right side of the screen, rightclick and press <code class="docutils literal"><span class="pre">View</span> <span class="pre">image</span></code> from the dropdown. Copy the url of that image.</p>
+<p><em>A style from Mapstack by Stamen</em></p>
+<img alt="_images/SPH_2018-02-04_2861.png" src="_images/SPH_2018-02-04_2861.png" />
+<p>Then in Maproom, create a new image source and use the Mapstack template. The Mapstack template already comes with a url. We just need to replace the part which determines the look of the map. This is the url of the Mapstack template</p>
+<p><code class="docutils literal"><span class="pre">http://a.sm.mapstack.stamen.com/($9a9a30[&#64;p],(mapbox-water,$60c9fe[source-in]))/{zoomlevel}/{tilex}/{tiley}.png</span></code>. We need to replace the middle part <code class="docutils literal"><span class="pre">($9a9a30[&#64;p],(mapbox-water,$60c9fe[source-in]))</span></code> with the middle part of the url you just copied. Also make sure to copy the attribution you see in the bottom right of the map. An example of this is</p>
+<blockquote>
+<div>Tiles by MapBox, Data © OpenStreetMap contributors
+Tiles by Stamen Design, under CC-BY 3.0. Data © OpenStreetMap contributors, under CC-BY-SA.</div></blockquote>
+</div>
 <div class="section" id="where-to-get-these">
 <h3>Where to get these<a class="headerlink" href="#where-to-get-these" title="Permalink to this headline">¶</a></h3>
 <p>There are many places you can get access to custom styles. Some of these are freely accessible, for others you need a free token, others are commercial.</p>
@@ -373,7 +389,7 @@
 </div>
 </div>
 <div class="section" id="units">
-<span id="id5"></span><h2>Units<a class="headerlink" href="#units" title="Permalink to this headline">¶</a></h2>
+<span id="id6"></span><h2>Units<a class="headerlink" href="#units" title="Permalink to this headline">¶</a></h2>
 <p>If your system units are set to small units, like meters or inches, making maps will cause issues in 3dsMax. A map of a city of 10*10 km measures about 400.000 inches. 3dsMax has difficulty showing large units like these accurately. I advise to use kilometers or miles when making maps. Maproom notifies you of this in the home screen and offers you shortcuts to change your system units. You can also do this manually. Keep in mind you need to change the <strong>system</strong> units, not the <strong>display</strong> units.</p>
 <img alt="_images/MPR_2016-02-01_1858.png" src="_images/MPR_2016-02-01_1858.png" />
 <p><em>A notification in the home screen helps you quickly change your system units</em></p>

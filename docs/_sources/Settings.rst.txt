@@ -171,6 +171,8 @@ Image providers all use similar url's
 
 Sometimes the order of the symbols is different. Sometimes you don't need a token or a mapid. You don't need to guess these url's. Every map provider can tell you how these url's should look.
 
+.. warning:: Even though it's technically possible to add a certain image source, this doesn't mean you're allowed to. ArcGis for instance has beautiful image sources, easily accessible. But it's only allowed to use them in software by ESRI. Google maps would also be pretty cool to use, however you'll have to pay a hefty license fee to do so. Always keep the terms and conditions in mind. 
+
 Working with image sources
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -208,6 +210,23 @@ Examples
 .. image:: _images\\reprojected_e2e9e11a-8e98-4c1d-bd25-198220841041.png
 
 *Another style from Mapstack by Stamen*
+
+Mapstack Tutorial
+^^^^^^^^^^^^^^^^^
+
+Here's how to get the correct url from Mapstack. First go to `Mapstack <http://mapstack.stamen.com/>`_ and then press the "Try it" button. Fiddle with the map layers and settings. It's best just to try it for a bit and create a style you like. Once you're satisfied, in the map on the right side of the screen, rightclick and press ``View image`` from the dropdown. Copy the url of that image.
+
+*A style from Mapstack by Stamen*
+
+.. image:: _images\\SPH_2018-02-04_2861.png
+
+Then in Maproom, create a new image source and use the Mapstack template. The Mapstack template already comes with a url. We just need to replace the part which determines the look of the map. This is the url of the Mapstack template
+
+``http://a.sm.mapstack.stamen.com/($9a9a30[@p],(mapbox-water,$60c9fe[source-in]))/{zoomlevel}/{tilex}/{tiley}.png``. We need to replace the middle part ``($9a9a30[@p],(mapbox-water,$60c9fe[source-in]))`` with the middle part of the url you just copied. Also make sure to copy the attribution you see in the bottom right of the map. An example of this is
+
+	
+    Tiles by MapBox, Data © OpenStreetMap contributors
+    Tiles by Stamen Design, under CC-BY 3.0. Data © OpenStreetMap contributors, under CC-BY-SA.
 
 Where to get these
 ^^^^^^^^^^^^^^^^^^

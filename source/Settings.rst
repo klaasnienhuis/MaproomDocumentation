@@ -152,7 +152,7 @@ Image source
 
 Image sources are the places where Maproom gets its satellite images and other map textures from. Maproom has built in image sources, such as Bing, Mapbox and Stamen. But there are a lot more image providers out there. The User Image sources section enables you to set up your own custom sources.
 
-An image source provides its images through a specific url template. This url template is used to download the map textures at any zoomlevel and from any location. Usually image providers follow a common pattern, but you still need to set up that url pattern. The pattern contains a few symbols. Here's an example:
+An image source provides its images through a specific url template. This url template is used to download the map textures at any zoomlevel and from any location. Usually image providers follow a common pattern, we'll leverage that. These patterns contains a few symbols. Here's an example:
 
 ``http://api.tiles.mapbox.com/v4/{mapid}/{zoomlevel}/{tilex}/{tiley}.png?access_token={token}``
 
@@ -169,18 +169,20 @@ Image providers all use similar url's
 - ``http://a.sm.mapstack.stamen.com/($d9da8e[@p],(mapbox-water,$60c9fe[source-in]))/{zoomlevel}/{tilex}/{tiley}.png``
 - ``https://maps1.aerisapi.com/{token}/{mapid}/{zoomlevel}/{tilex}/{tiley}/current.png``
 
-Sometimes the order of the symbols is different. Sometimes you don't need a token or a mapid. You don't need to guess these url's. Every map provider can tell you how these url's should look.
+Sometimes the order of the symbols is different. Sometimes you don't need a token or a mapid. You don't need to guess these url's. Every map provider can tell you how these url's should look. And when you create a new image source, Maproom offers a few examples.
+
+.. warning:: Even though it's technically possible to add a certain image source, this doesn't mean you're allowed to. ArcGis for instance has beautiful image sources, easily accessible. But it's only allowed to use them in software by ESRI. Google maps would also be pretty cool to use, however you'll have to pay a hefty license fee to do so. Always keep the terms and conditions in mind. 
 
 Working with image sources
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Go to Settings > Image sources. There you see a dropdown with the custom image sources. Use the ``New``, ``Delete`` and ``Clone`` buttons to create or delete an image source. Use the ``Test`` button to test it once you've created one. The test will tell you if the image source has been set up properly. Give your image source a proper name and make sure it's unique. Fill in the url template, optionally the map id and token and the zoom limits. Make sure you add the attribution required by the map provider.
-
-.. note:: Content provided through the Maproom script is copyrighted by the respective owner. Check out the copyright, license and attribution conditions for each of these sources. The creator of this script does not claim ownership and can't provide a license for this content.
+Go to Settings > Image sources. There you see a dropdown with the custom image sources. Use the ``New``, ``Delete`` and ``Clone`` buttons to create or delete an image source. Use the ``Test`` button to test it once you've created one. The test will tell you if the image source has been set up properly. Only when you pass this test you can actually use the image source in your maps. Give your image source a proper name and make sure it's unique. Fill in the url template, optionally the map id and token and the zoom limits. Make sure you add the attribution required by the map provider.
 
 .. image:: _images\\SPH_2018-02-03_2855.png
 
 *A user image source setup from Aeris Weather. Note the blurred out token. This provider needs you to make an account*
+
+.. note:: Content provided through the Maproom script is copyrighted by the respective owner. Check out the copyright, license and attribution conditions for each of these sources. The creator of this script does not claim ownership and can't provide a license for this content.
 
 Examples
 ^^^^^^^^
@@ -208,6 +210,23 @@ Examples
 .. image:: _images\\reprojected_e2e9e11a-8e98-4c1d-bd25-198220841041.png
 
 *Another style from Mapstack by Stamen*
+
+Mapstack Tutorial
+^^^^^^^^^^^^^^^^^
+
+Here's how to get the correct url from Mapstack. First go to `mapstack.stamen.com <http://mapstack.stamen.com/>`_ and then press the "Try it" button. Fiddle with the map layers and settings. It's best just to try it for a bit and create a style you like. Once you're satisfied, in the map on the right side of the screen, rightclick and press ``View image`` from the dropdown. Copy the url of that image.
+
+.. image:: _images\\SPH_2018-02-04_2861.png
+
+*A style from Mapstack by Stamen*
+
+Then in Maproom, create a new image source and use the Mapstack template. The Mapstack template already comes with a url. We just need to replace the part which determines the look of the map. This is the url of the Mapstack template
+
+``http://a.sm.mapstack.stamen.com/($9a9a30[@p],(mapbox-water,$60c9fe[source-in]))/{zoomlevel}/{tilex}/{tiley}.png``. We need to replace the middle part ``($9a9a30[@p],(mapbox-water,$60c9fe[source-in]))`` with the middle part of the url you just copied. Also make sure to copy the attribution you see in the bottom right of the map. An example of this is
+
+	
+    Tiles by MapBox, Data © OpenStreetMap contributors
+    Tiles by Stamen Design, under CC-BY 3.0. Data © OpenStreetMap contributors, under CC-BY-SA.
 
 Where to get these
 ^^^^^^^^^^^^^^^^^^
