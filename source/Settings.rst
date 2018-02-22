@@ -180,7 +180,7 @@ Go to Settings > Image sources. There you see a dropdown with the custom image s
 
 .. image:: _images\\SPH_2018-02-03_2855.png
 
-*A user image source setup from Aeris Weather. Note the blurred out token. This provider needs you to make an account*
+*A user image source setup from AerisWeather. Note the blurred out token. This provider needs you to make an account*
 
 .. note:: Content provided through the Maproom script is copyrighted by the respective owner. Check out the copyright, license and attribution conditions for each of these sources. The creator of this script does not claim ownership and can't provide a license for this content.
 
@@ -189,15 +189,15 @@ Examples
 
 .. image:: _images\\reprojected_2cedb620-e778-4e6f-82e3-b2b669f77e55.png
 
-*Temperature forecast from Aeris Weather*
+*Temperature forecast from AerisWeather*
 
 .. image:: _images\\reprojected_8964b459-545a-406d-ac6e-e4609c7e64f5.png
 
-*Blue Marble from Aeris Weather*
+*Blue Marble from AerisWeather*
 
 .. image:: _images\\reprojected_70212652-2228-4a4d-a8d3-743fb872e57e.png
 
-*Clouds from Aeris Weather*
+*Clouds from AerisWeather*
 
 .. image:: _images\\SPH_2018-02-03_2860.png
 
@@ -234,7 +234,7 @@ Where to get these
 There are many places you can get access to custom styles. Some of these are freely accessible, for others you need a free token, others are commercial.
 
 - `Mabbox studio <https://www.mapbox.com/mapbox-studio>`_
-- `Aeris weather <https://www.aerisweather.com/support/docs/aeris-maps/reference/map-layers/>`_
+- `AerisWeather <https://www.aerisweather.com/support/docs/aeris-maps/reference/map-layers/>`_
 - `Openweathermap <http://openweathermap.org/api/weathermaps>`_
 - `Vane <http://owm.io/sql-viewer?lat=38.87&lon=-121.47&zoom=10&select=red,green,blue&op=rgb&from=cloudless>`_
 - `Mapstack <http://mapstack.stamen.com/>`_
