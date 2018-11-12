@@ -78,5 +78,3 @@ In my case the straight line on the globe was about 8.640 km and the straight li
 .. image:: ..\\_images\\MPR_2017-10-06_2740.png
 
 *The line from Google Earth projected back onto the flat map. That line (the blue one) is the shortest path when flying!*
-
-.. todo:: Add KMZ support.

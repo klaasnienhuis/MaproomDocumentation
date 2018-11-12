@@ -28,6 +28,7 @@ Make beautiful maps in 3ds Max
    Stylesheet
    Installation
    Settings
+   survey
    Version
    History
    About
