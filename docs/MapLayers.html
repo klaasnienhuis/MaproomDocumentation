@@ -17,42 +17,36 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="Maproom 1.0 documentation" href="index.html"/>
-        <link rel="next" title="Map Helpers" href="MapHelpers.html"/>
-        <link rel="prev" title="Map Presets" href="MapPresets.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Map Helpers" href="MapHelpers.html" />
+    <link rel="prev" title="Map Presets" href="MapPresets.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -107,6 +101,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Stylesheet.html">Stylesheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="survey.html">Survey</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Version.html">Version requirement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="History.html">History</a></li>
 <li class="toctree-l1"><a class="reference internal" href="About.html">About</a></li>
@@ -137,12 +132,6 @@
 <li class="toctree-l1"><a class="reference internal" href="testing/mxs.html">Testing MaxScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testing/CS.html">Testing .NET</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Floating licenses</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="floatinglicense/Overview.html">Floating license overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="floatinglicense/LicenseServer.html">License server</a></li>
-<li class="toctree-l1"><a class="reference internal" href="floatinglicense/Client.html">License client</a></li>
-</ul>
 
             
           
@@ -153,7 +142,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Maproom</a>
@@ -161,9 +150,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -207,21 +197,21 @@
             
   <div class="section" id="map-layers">
 <span id="id1"></span><h1>Map Layers<a class="headerlink" href="#map-layers" title="Permalink to this headline">¶</a></h1>
-<p>A single map can have one or more map layers. You can use the same type of layers or mix different types together. For instance use two openstreetmap layers, one with buildings and the other one with roads. Or use a map with a satellite layer and an osm layer. Each layer can be offset <a class="footnote-reference" href="#id4" id="id2">[1]</a> individually. When stacking multiple layers in a map, you need to take care of the z-fighting. Map layers by default are placed on the ground plane. You can push <a class="footnote-reference" href="#id5" id="id3">[2]</a> maplayers to the front or to the back to get the right order in the map.</p>
+<p>A single map can have one or more map layers. You can use the same type of layers or mix different types together. For instance use two openstreetmap layers, one with buildings and the other one with roads. Or use a map with a satellite layer and an osm layer. Each layer can be offset <a class="footnote-reference brackets" href="#id4" id="id2">1</a> individually. When stacking multiple layers in a map, you need to take care of the z-fighting. Map layers by default are placed on the ground plane. You can push <a class="footnote-reference brackets" href="#id5" id="id3">2</a> maplayers to the front or to the back to get the right order in the map.</p>
 <p>Check out the different types of layers you can use here <a class="reference internal" href="index.html#layers-toc"><span class="std std-ref">Map layer types</span></a>.</p>
 <div class="section" id="building-maps-and-updating-them">
 <span id="updating-map-layers"></span><h2>Building maps and updating them<a class="headerlink" href="#building-maps-and-updating-them" title="Permalink to this headline">¶</a></h2>
 <p>Generally you build a map by creating a maplayer, specifying the data you want to use and pressing the “build” or “update” button. Maproom will then get the data for you and make map geometry in your scene. Obviously the first map is never the final map and you need to update the map a few times. For instance change the zoomlevel on a terrain map, add heights, change the openstreetmap data. In addition to these changes you also can change the location of the map and the size of the area.</p>
 <p>Maproom does not update your maps in real time. If you make any of these changes you have to press the “build” or “update” button again and the map is updated. To help you with this, Maproom will indicate if there are changes which need to be pushed to the map.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_2015-09-26_1636_cr.png" src="_images/MPR_2015-09-26_1636_cr.png" />
 </div>
 <p>The basic state of a satellite map layer.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_2015-09-26_1637_cr.png" src="_images/MPR_2015-09-26_1637_cr.png" />
 </div>
 <p>The zoomlevel has changed. The yellow border appears to indicate a change has been made and the “Update map images” button is highlighted. Press this button to apply these changes and update the map.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_2015-09-26_1638_cr.png" src="_images/MPR_2015-09-26_1638_cr.png" />
 </div>
 <p>The area of the map has been altered. The yellow border indicates the location settings have changed and the “Update map images” button is highlighted. Press this button to update the map.</p>
@@ -230,43 +220,37 @@
 <div class="section" id="multiple-layers-in-one-map">
 <h2>Multiple layers in one map<a class="headerlink" href="#multiple-layers-in-one-map" title="Permalink to this headline">¶</a></h2>
 <p>Having multiple layers of different types in a single map is very powerful. It’s easy to add an extra layer. Each layer has its own location controls.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_2015-09-10_1607.png" src="_images/MPR_2015-09-10_1607.png" />
 </div>
 <p>Start with a new map. Press “Add a new layer…”</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_2015-09-10_1608.png" src="_images/MPR_2015-09-10_1608.png" />
 </div>
 <p>Pick a new layer type</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_2015-09-10_1609.png" src="_images/MPR_2015-09-10_1609.png" />
 </div>
 <p>The new layer has been added</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_2015-09-10_1606.png" src="_images/MPR_2015-09-10_1606.png" />
 </div>
 <p>Example: a satellite and shapefile layer</p>
 <p class="rubric">Footnotes</p>
-<table class="docutils footnote" frame="void" id="id4" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td>More about offset here: <a class="reference internal" href="Location.html#location-offset"><span class="std std-ref">Offset</span></a>.</td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id5" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td>More about push here: <a class="reference internal" href="Location.html#location-push"><span class="std std-ref">Push</span></a>.</td></tr>
-</tbody>
-</table>
+<dl class="footnote brackets">
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>More about offset here: <a class="reference internal" href="Location.html#location-offset"><span class="std std-ref">Offset</span></a>.</p>
+</dd>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p>More about push here: <a class="reference internal" href="Location.html#location-push"><span class="std std-ref">Push</span></a>.</p>
+</dd>
+</dl>
 </div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -275,7 +259,7 @@
         <a href="MapHelpers.html" class="btn btn-neutral float-right" title="Map Helpers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="MapPresets.html" class="btn btn-neutral" title="Map Presets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="MapPresets.html" class="btn btn-neutral float-left" title="Map Presets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -284,11 +268,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Klaas Nienhuis.
+        &copy; Copyright 2021, Klaas Nienhuis
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -301,36 +285,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

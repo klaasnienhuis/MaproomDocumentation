@@ -17,42 +17,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Maproom 1.0 documentation" href="../index.html"/>
-        <link rel="next" title="Openstreetmap" href="Openstreetmap.html"/>
-        <link rel="prev" title="Satellite" href="Satellite.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Openstreetmap" href="Openstreetmap.html" />
+    <link rel="prev" title="Satellite" href="Satellite.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -103,6 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Stylesheet.html">Stylesheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../survey.html">Survey</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Version.html">Version requirement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../History.html">History</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../About.html">About</a></li>
@@ -142,12 +137,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../testing/mxs.html">Testing MaxScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../testing/CS.html">Testing .NET</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Floating licenses</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../floatinglicense/Overview.html">Floating license overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../floatinglicense/LicenseServer.html">License server</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../floatinglicense/Client.html">License client</a></li>
-</ul>
 
             
           
@@ -158,7 +147,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Maproom</a>
@@ -166,9 +155,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -219,19 +209,19 @@
 <div class="section" id="two-locations">
 <h2>Two locations<a class="headerlink" href="#two-locations" title="Permalink to this headline">¶</a></h2>
 <p>A ripple layer has two locations: a starting location and an ending location. The ripple map creates multiple ripples based on the movment between these two positions. Actually, the altitudes are the most important settings. If both locations have the same altitude, the ripple layer doesn’t add any value. This means the ripple map is best suited for zooming motions. A second use case is when you create a static map looking towards the horizon from a low altitude. These shots usually need a sharp map in the foreground and require a blurry map towards the horizon.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-02-22_1884.png" src="../_images/MPR_2016-02-22_1884.png" />
 </div>
 <p>Both locations have the same offset (0,0). The start location has an altitude ot 10 KM, the end location 500 KM. This means we’re zooming out.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/Ripple_render_002.jpg" src="../_images/Ripple_render_002.jpg" />
 </div>
 <p>Each red box is a separate ripple with a decreasing zoomlevel while zooming out. Notice the different levels of sharpness of each box (the effect has been exaggerated)</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-02-22_1883.png" src="../_images/MPR_2016-02-22_1883.png" />
 </div>
 <p>The circles are the ripples previewed in the viewport. the size of the circle matches the size what the camera can see with a bit of margin.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-03-21_1934.png" src="../_images/MPR_2016-03-21_1934.png" />
 </div>
 <p>Enable the option “Preview only” if you just want to see the ripples and not the actual maps. This is very handy for previews.</p>
@@ -239,15 +229,15 @@
 <div class="section" id="multiple-maps">
 <h2>Multiple maps<a class="headerlink" href="#multiple-maps" title="Permalink to this headline">¶</a></h2>
 <p>The ripple layer creates multiple satellite layers but this is hidden from you. You don’t have to manage them manually. Each satellite map is created based on the offsets of the start and end location. More importantly, the zoomlevel of the map is determined based on the altitude of the start and end location. If you have a low altitude (you’re close to the earth) you need a high zoomlevel. If you have a high altitude it’s the other way round. Each time your altitude doubles, you decrease one zoomlevel.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-02-22_1876_cr.png" src="../_images/MPR_2016-02-22_1876_cr.png" />
 </div>
 <p>One ripple map consists of multiple layers</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-02-22_1877_cr.png" src="../_images/MPR_2016-02-22_1877_cr.png" />
 </div>
 <p>One ripple map consists of multiple layers</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-02-22_1878_cr.png" src="../_images/MPR_2016-02-22_1878_cr.png" />
 </div>
 <p>Moving the locations apart clearly shows the separate layers</p>
@@ -255,7 +245,7 @@
 <div class="section" id="render-resolution">
 <h2>Render resolution<a class="headerlink" href="#render-resolution" title="Permalink to this headline">¶</a></h2>
 <p>The map resolution is based on the viewing altitude. But what happens if you start rendering HD images of your map. Doesn’t the map need to be sharper than when rendering images of 256 pixels wide? Yes it does! The viewing altitude is one factor to determine the chosen zoomlevel. Output size also plays a part. By default the ripple layer assumes an output size of 640. This means your maps will look sharp if you render them at 640 pixels wide. If you render at 1920 pixels wide this map looks pretty awful. In that case, set the output size to 1920 and update your map images. Building the map images will take longer since maproom has to download more images.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-03-21_1930_001.png" src="../_images/MPR_2016-03-21_1930_001.png" />
 </div>
 <p>Specify the render size to make sure your maps are sharp when rendered.</p>
@@ -263,11 +253,11 @@
 <div class="section" id="camera-animation">
 <h2>Camera animation<a class="headerlink" href="#camera-animation" title="Permalink to this headline">¶</a></h2>
 <p>The ripple layer creates a camera animation for you. You don’t need to use it, but it’s great for reference. Zooming into a map looks best when the velocity of the camera is exponential. If you’re far away you want to move faster, once you get close to the map you have to decrease your speed. The rate of change ideally is exponential which is also how the created camera behaves. Since the size of each ripple doubles when the altitude doubles, this means the camera visits each ripple at constant time intervals. You can set the time interval in the ripple settings.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-03-21_1931.png" src="../_images/MPR_2016-03-21_1931.png" />
 </div>
 <p>Set the time interval to specify the number of frames between each ripple</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-02-22_1879.png" src="../_images/MPR_2016-02-22_1879.png" />
 </div>
 <p>The camera visits each ripple in regular intervals</p>
@@ -275,15 +265,15 @@
 <div class="section" id="overlap">
 <h2>Overlap<a class="headerlink" href="#overlap" title="Permalink to this headline">¶</a></h2>
 <p>If the distance between the start and end location becomes too great, gaps might appear in the map. This happens because the individual ripples don’t have enough overlap. You can avoid this by increasing the overlap when building the map. The overlap factor allows you to double the map size at a maximum.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-03-21_1932.png" src="../_images/MPR_2016-03-21_1932.png" />
 </div>
 <p>Setting the overlap to 1.0 doubles the size of the map.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-02-22_1880_cr.png" src="../_images/MPR_2016-02-22_1880_cr.png" />
 </div>
 <p>The ripples are spaced too much. Gaps will occur at the edges of the map when rendering it.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-02-22_1881_cr.png" src="../_images/MPR_2016-02-22_1881_cr.png" />
 </div>
 <p>Increasing the overlap factor adds more “flesh” to the maps giving you more freedom in camera movement.</p>
@@ -291,7 +281,7 @@
 <div class="section" id="z-gap">
 <h2>Z gap<a class="headerlink" href="#z-gap" title="Permalink to this headline">¶</a></h2>
 <p>The ripples are stacked on top of each other. They’re spaced slightly apart to avoid z fighting. The amount of spacing (in meters) is called the z gap. You can set this to a value between 0.1 m and 100 m.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-03-21_1933.png" src="../_images/MPR_2016-03-21_1933.png" />
 </div>
 <p>In this case there’s a gap of 10 meters between each ripple.</p>
@@ -299,15 +289,15 @@
 <div class="section" id="static-maps">
 <h2>Static maps<a class="headerlink" href="#static-maps" title="Permalink to this headline">¶</a></h2>
 <p>A ripple layer is also very suited to create shots where a low camera looks at the horizon. You need a sharp map in the foreground, but near the horizon the map can have a low resolution.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/Ripple_render_003.jpg" src="../_images/Ripple_render_003.jpg" />
 </div>
 <p>This map is sharp overall but has a much higher zoomlevel in the foreground than in the background</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-02-22_1886.png" src="../_images/MPR_2016-02-22_1886.png" />
 </div>
 <p>A low camera looking towards the horizon</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-02-22_1885.png" src="../_images/MPR_2016-02-22_1885.png" />
 </div>
 <p>Plan your map with the camera near the starting position and looking at the ending position</p>
@@ -316,9 +306,7 @@
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -327,7 +315,7 @@
         <a href="Openstreetmap.html" class="btn btn-neutral float-right" title="Openstreetmap" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Satellite.html" class="btn btn-neutral" title="Satellite" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Satellite.html" class="btn btn-neutral float-left" title="Satellite" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -336,11 +324,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Klaas Nienhuis.
+        &copy; Copyright 2021, Klaas Nienhuis
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -353,36 +341,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

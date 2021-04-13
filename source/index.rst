@@ -9,8 +9,6 @@
 Make beautiful maps in 3ds Max
 ==============================
 
-.. todolist::
-
 .. _user-docs:
 
 .. toctree::
@@ -76,13 +74,4 @@ Make beautiful maps in 3ds Max
    
    testing/mxs
    testing/CS
-   
-.. _floatinglicense:
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Floating licenses
-   
-   floatinglicense/Overview
-   floatinglicense/LicenseServer
-   floatinglicense/Client

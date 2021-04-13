@@ -17,42 +17,36 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="Maproom 1.0 documentation" href="index.html"/>
-        <link rel="next" title="Stylesheet" href="Stylesheet.html"/>
-        <link rel="prev" title="Location" href="Location.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Stylesheet" href="Stylesheet.html" />
+    <link rel="prev" title="Location" href="Location.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -108,6 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Stylesheet.html">Stylesheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="survey.html">Survey</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Version.html">Version requirement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="History.html">History</a></li>
 <li class="toctree-l1"><a class="reference internal" href="About.html">About</a></li>
@@ -138,12 +133,6 @@
 <li class="toctree-l1"><a class="reference internal" href="testing/mxs.html">Testing MaxScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testing/CS.html">Testing .NET</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Floating licenses</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="floatinglicense/Overview.html">Floating license overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="floatinglicense/LicenseServer.html">License server</a></li>
-<li class="toctree-l1"><a class="reference internal" href="floatinglicense/Client.html">License client</a></li>
-</ul>
 
             
           
@@ -154,7 +143,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Maproom</a>
@@ -162,9 +151,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -209,8 +199,8 @@
   <div class="section" id="height">
 <span id="id1"></span><h1>Height<a class="headerlink" href="#height" title="Permalink to this headline">¶</a></h1>
 <p>Heights can be loaded into a map based on data sources as well. Previously (until January 2017) there were two static datasets: SRTM3 and SRTM1. Currently there are two dynamic datasets provided by Mapbox and Mapzen. The new elevation data has zoomlevels which means you can get terrain heights for any map size: from city to continent.</p>
-<p>You can add terrain heights to a satellite map by picking one of the two items from the <code class="docutils literal"><span class="pre">Terrain</span> <span class="pre">heights</span></code> dropdown. Pick a zoomlevel or use the <code class="docutils literal"><span class="pre">Estimate</span> <span class="pre">zoomlevel</span></code> button. Make sure you have a valid API key entered for Mapbox or Mapzen. Read more about API keys here: <a class="reference internal" href="Settings.html#mapapikey"><span class="std std-ref">Map API key</span></a></p>
-<div class="figure">
+<p>You can add terrain heights to a satellite map by picking one of the two items from the <code class="docutils literal notranslate"><span class="pre">Terrain</span> <span class="pre">heights</span></code> dropdown. Pick a zoomlevel or use the <code class="docutils literal notranslate"><span class="pre">Estimate</span> <span class="pre">zoomlevel</span></code> button. Make sure you have a valid API key entered for Mapbox or Mapzen. Read more about API keys here: <a class="reference internal" href="Settings.html#mapapikey"><span class="std std-ref">Map API key</span></a></p>
+<div class="figure align-default">
 <img alt="_images/MPR_2017-10-06_2741.png" src="_images/MPR_2017-10-06_2741.png" />
 </div>
 <p><em>The terrain height section</em></p>
@@ -220,27 +210,27 @@
 <p>Similar to the regular image sources for satellite maps, the terrain resolution can be altered by changing the zoomlevel. You can specify the zoomlevel of the terrain heights separately from the map images. It also means you can overdo it by picking a zoom level which is too high, meaning long waits and long processing times. The terrain heights are packed into a 16 bit displacement map, they can get heavy!</p>
 <p>The huge advantage of the new terrain heights over the SRTM datasets is that they can be zoomed. This means you can make a map with terrain heights at large or small scales: continents and cities. The highest zoomlevel of both the Mapbox and Mapzen data is based on SRTM though. They go to zoomlevel 14 or 15.</p>
 <p>Here’s a series of images of Port-au-Prince rendered at 1200px with Mapbox light map images and Mapzen terrain heights. The terrain heights have been exhaggerated in the larger scale images. You can do this yourself by changing the displacement value on the map object in the scene. The default height is 65 when working in km.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/5000km_6x.png" src="_images/5000km_6x.png" />
 </div>
 <p><em>5000*5000 km, heights multiplied 6 times</em></p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/1500km_3x.png" src="_images/1500km_3x.png" />
 </div>
 <p><em>1500*1500 km, heights multiplied 3 times</em></p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/0400km_2x.png" src="_images/0400km_2x.png" />
 </div>
 <p><em>400*400 km, heights multiplied 2 times</em></p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/0100km_1x.png" src="_images/0100km_1x.png" />
 </div>
 <p><em>100*100 km, actual heights</em></p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/0025km_1x.png" src="_images/0025km_1x.png" />
 </div>
 <p><em>25*25 km, actual heights</em></p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/0005km_1x.png" src="_images/0005km_1x.png" />
 </div>
 <p><em>5*5 km, actual heights. This is about the maximum detail you can get out of the terrain heights.</em></p>
@@ -257,21 +247,21 @@
 <div class="section" id="mesh-density">
 <h2>Mesh density<a class="headerlink" href="#mesh-density" title="Permalink to this headline">¶</a></h2>
 <p>The level of detail in the terrain not only depends on the size and resolution of the displacement map but also on the density of the mesh. The map object is basically a plane with a turbosmooth modifier applied. By default the turbosmooth iterations value is set to a level relative to the size of your map. If you have a big map, the mesh is subdivided less than when you have a small map. This avoids crashing max by using unrealistic turbosmooth values.</p>
-<p>You can finetune the mesh density by using the <code class="docutils literal"><span class="pre">`Terrain</span> <span class="pre">mesh</span> <span class="pre">density`</span></code> slider. This sets the number of segments on the map plane. You can also manually go into the map object and alter the turbosmooth subdivisions.</p>
-<div class="figure">
+<p>You can finetune the mesh density by using the <code class="docutils literal notranslate"><span class="pre">`Terrain</span> <span class="pre">mesh</span> <span class="pre">density`</span></code> slider. This sets the number of segments on the map plane. You can also manually go into the map object and alter the turbosmooth subdivisions.</p>
+<div class="figure align-default">
 <img alt="_images/MPR_2016-10-03_2141.png" src="_images/MPR_2016-10-03_2141.png" />
 </div>
 <p><em>Finetune the terrain mesh density</em></p>
 <p>Here’s a series of renders of the same terrain with increasing detail (i.e. decreasing subdivision). Each render uses the same SRTM1 terrain and displacement map of about 4800*4800 pixels.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_Etna_SRTM1_10.jpg" src="_images/MPR_Etna_SRTM1_10.jpg" />
 </div>
 <p><em>Terrain mesh density: 10</em></p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_Etna_SRTM1_25.jpg" src="_images/MPR_Etna_SRTM1_25.jpg" />
 </div>
 <p><em>Terrain mesh density: 25</em></p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_Etna_SRTM1_40.jpg" src="_images/MPR_Etna_SRTM1_40.jpg" />
 </div>
 <p><em>Terrain mesh density: 40</em></p>
@@ -280,9 +270,7 @@
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -291,7 +279,7 @@
         <a href="Stylesheet.html" class="btn btn-neutral float-right" title="Stylesheet" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Location.html" class="btn btn-neutral" title="Location" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Location.html" class="btn btn-neutral float-left" title="Location" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -300,11 +288,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Klaas Nienhuis.
+        &copy; Copyright 2021, Klaas Nienhuis
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -317,36 +305,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

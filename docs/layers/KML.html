@@ -17,42 +17,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Maproom 1.0 documentation" href="../index.html"/>
-        <link rel="next" title="CyberCity 3D, Inc. (CC3D)" href="CC3D.html"/>
-        <link rel="prev" title="Shapefile" href="Shapefile.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CyberCity 3D, Inc. (CC3D)" href="CC3D.html" />
+    <link rel="prev" title="Shapefile" href="Shapefile.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -103,6 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Stylesheet.html">Stylesheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../survey.html">Survey</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Version.html">Version requirement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../History.html">History</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../About.html">About</a></li>
@@ -138,12 +133,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../testing/mxs.html">Testing MaxScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../testing/CS.html">Testing .NET</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Floating licenses</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../floatinglicense/Overview.html">Floating license overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../floatinglicense/LicenseServer.html">License server</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../floatinglicense/Client.html">License client</a></li>
-</ul>
 
             
           
@@ -154,7 +143,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Maproom</a>
@@ -162,9 +151,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -211,7 +201,7 @@
 <p>KML is a fileformat used by Google Earth. When you draw paths and polygons in Google Earth you can save them as KML files. Maproom is able to read and write KML files. Though there are limitations, only closed and open shapes are supported at the moment.</p>
 <iframe width="700" height="525" src="https://www.youtube.com/embed/xyNRG8Pca8s" frameborder="0" allowfullscreen></iframe><div class="section" id="exporting-kml-with-maproom">
 <h2>Exporting KML with Maproom<a class="headerlink" href="#exporting-kml-with-maproom" title="Permalink to this headline">¶</a></h2>
-<p>First you need a map. Make one with Maproom. I’ve made a map of the Spa race circuit at Francorchamps. I’ve then imported the racetrack from openstreetmap. However, you can also draw your own shapes. They don’t need to be connected or linked to the map. Once the shapes are in place, select them and go to the <code class="docutils literal"><span class="pre">Map</span> <span class="pre">tools</span></code> of your map. Press the <code class="docutils literal"><span class="pre">Pick...</span></code> button to specify where you want to save the kml file. Finally press the <code class="docutils literal"><span class="pre">Export</span> <span class="pre">selected</span></code> button to export the selected shapes to kml. Make sure your shapes have enough points. If you export a circle, you’ll get a shape with 4 points in Google Earth. Always subdivide!</p>
+<p>First you need a map. Make one with Maproom. I’ve made a map of the Spa race circuit at Francorchamps. I’ve then imported the racetrack from openstreetmap. However, you can also draw your own shapes. They don’t need to be connected or linked to the map. Once the shapes are in place, select them and go to the <code class="docutils literal notranslate"><span class="pre">Map</span> <span class="pre">tools</span></code> of your map. Press the <code class="docutils literal notranslate"><span class="pre">Pick...</span></code> button to specify where you want to save the kml file. Finally press the <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">selected</span></code> button to export the selected shapes to kml. Make sure your shapes have enough points. If you export a circle, you’ll get a shape with 4 points in Google Earth. Always subdivide!</p>
 <p>You now can drag this kml file into Google Earth and the shapes should pop up in the right place.</p>
 <p>Keep in mind that closed shapes in 3dsMax will be seen as polygons in Google Earth, they’re filled. You can change this by adjusting the style of the shapes in Google Earth.</p>
 <img alt="../_images/MPR_2017-10-06_2729.png" src="../_images/MPR_2017-10-06_2729.png" />
@@ -238,11 +228,11 @@
 <h2>Projection<a class="headerlink" href="#projection" title="Permalink to this headline">¶</a></h2>
 <p>Since the maps in Maproom are flat and Google Earth is presented as a globe, KML files show the effects of map projections very nicely. Just try the following:</p>
 <ul class="simple">
-<li>Make a world map in Maproom with the default map projection (Mercator)</li>
-<li>Draw a straight line from Denmark to Japan and subdivide the line</li>
-<li>Export the line to KML and import it in Google Earth</li>
-<li>Then draw a straight line in Google Earth between Denmark and Japan</li>
-<li>Compare the lengths</li>
+<li><p>Make a world map in Maproom with the default map projection (Mercator)</p></li>
+<li><p>Draw a straight line from Denmark to Japan and subdivide the line</p></li>
+<li><p>Export the line to KML and import it in Google Earth</p></li>
+<li><p>Then draw a straight line in Google Earth between Denmark and Japan</p></li>
+<li><p>Compare the lengths</p></li>
 </ul>
 <p>In my case the straight line on the globe was about 8.640 km and the straight line on the map 10.000 km</p>
 <img alt="../_images/MPR_2017-10-06_2738.png" src="../_images/MPR_2017-10-06_2738.png" />
@@ -256,9 +246,7 @@
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -267,7 +255,7 @@
         <a href="CC3D.html" class="btn btn-neutral float-right" title="CyberCity 3D, Inc. (CC3D)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Shapefile.html" class="btn btn-neutral" title="Shapefile" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Shapefile.html" class="btn btn-neutral float-left" title="Shapefile" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -276,11 +264,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Klaas Nienhuis.
+        &copy; Copyright 2021, Klaas Nienhuis
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -293,36 +281,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

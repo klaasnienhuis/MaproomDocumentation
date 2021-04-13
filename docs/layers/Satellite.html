@@ -17,42 +17,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Maproom 1.0 documentation" href="../index.html"/>
-        <link rel="next" title="Ripple" href="Ripple.html"/>
-        <link rel="prev" title="About" href="../About.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Ripple" href="Ripple.html" />
+    <link rel="prev" title="About" href="../About.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -103,6 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Stylesheet.html">Stylesheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../survey.html">Survey</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Version.html">Version requirement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../History.html">History</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../About.html">About</a></li>
@@ -150,12 +145,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../testing/mxs.html">Testing MaxScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../testing/CS.html">Testing .NET</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Floating licenses</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../floatinglicense/Overview.html">Floating license overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../floatinglicense/LicenseServer.html">License server</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../floatinglicense/Client.html">License client</a></li>
-</ul>
 
             
           
@@ -166,7 +155,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Maproom</a>
@@ -174,9 +163,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -224,27 +214,27 @@
 <p>A satellite layer is a great starting point when creating any map. You can map large and small areas quickly by adjusting the zoomlevel. There are many map styles you can use.</p>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/Satellite_Bing.jpg" src="../_images/Satellite_Bing.jpg" />
 </div>
 <p><em>Berlin and its surroundings with Bing</em></p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/Satellite_comic.jpg" src="../_images/Satellite_comic.jpg" />
 </div>
 <p><em>Berlin and its surroundings with Mapboc Comic</em></p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/Satellite_mapboxOutdoors.jpg" src="../_images/Satellite_mapboxOutdoors.jpg" />
 </div>
 <p><em>Berlin and its surroundings with Mapbox outdoors</em></p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/Satellite_MapboxLight_SRTM3.jpg" src="../_images/Satellite_MapboxLight_SRTM3.jpg" />
 </div>
 <p><em>Stavanger, Norway, and it’s surrounding fjords. Mapbox light texture and SRTM3 height data.</em></p>
 </div>
 <div class="section" id="interface">
 <h2>Interface<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h2>
-<p>The satellite layer has three options: <code class="docutils literal"><span class="pre">Image</span> <span class="pre">source</span></code>, <code class="docutils literal"><span class="pre">Zoom</span></code> and <code class="docutils literal"><span class="pre">Terrain</span> <span class="pre">heights</span></code>.</p>
-<div class="figure">
+<p>The satellite layer has three options: <code class="docutils literal notranslate"><span class="pre">Image</span> <span class="pre">source</span></code>, <code class="docutils literal notranslate"><span class="pre">Zoom</span></code> and <code class="docutils literal notranslate"><span class="pre">Terrain</span> <span class="pre">heights</span></code>.</p>
+<div class="figure align-default">
 <img alt="../_images/MPR_2015-09-26_1639_01.png" src="../_images/MPR_2015-09-26_1639_01.png" />
 </div>
 <p><em>An overview of a satellite map layer</em></p>
@@ -252,10 +242,10 @@
 <h3>Image source<a class="headerlink" href="#image-source" title="Permalink to this headline">¶</a></h3>
 <p>With the image source you specify which texture you want for the map, e.g. Bing, Mapbox, Mapquest. Each image provider issues an attribution text with links to the source. These have to be displayed in the products you make, be it images, animations or something else.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Content provided through the Maproom script is copyrighted by the respective owner. Check out the copyright, license and attribution conditions for each of these sources. The creator of this script does not claim ownership and can’t provide a license for this content.</p>
+<p class="admonition-title">Note</p>
+<p>Content provided through the Maproom script is copyrighted by the respective owner. Check out the copyright, license and attribution conditions for each of these sources. The creator of this script does not claim ownership and can’t provide a license for this content.</p>
 </div>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2015-09-26_1640.png" src="../_images/MPR_2015-09-26_1640.png" />
 </div>
 <p><em>A list of available map layers</em></p>
@@ -264,7 +254,7 @@
 <div class="section" id="zoom">
 <span id="raster-zoom"></span><h2>Zoom<a class="headerlink" href="#zoom" title="Permalink to this headline">¶</a></h2>
 <p>The zoom determines the zoomlevel you’re downloading. A higher zoomlevel means sharper images but at the same time you’ll need more images to cover the same area. Maproom protects you from picking zoomlevels which are too high and which would result in too many downloads.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2015-09-26_1641.png" src="../_images/MPR_2015-09-26_1641.png" />
 </div>
 <p><em>Most image sources have zoomlevels between 1 and 21</em></p>
@@ -275,23 +265,23 @@
 </div>
 <div class="section" id="estimate-zoom">
 <span id="auto-zoom"></span><h2>Estimate zoom<a class="headerlink" href="#estimate-zoom" title="Permalink to this headline">¶</a></h2>
-<p>Getting the right zoomlevel takes a bit of practice. And while Maproom protects you against picking a technically inappropriate zoomlevel, this doesn’t help you much picking a good-looking zoomlevel. You can use the <code class="docutils literal"><span class="pre">`Estimate</span> <span class="pre">zoomlevel`</span></code> feature to do just that. Let’s illustrate this with an example.</p>
-<div class="figure">
+<p>Getting the right zoomlevel takes a bit of practice. And while Maproom protects you against picking a technically inappropriate zoomlevel, this doesn’t help you much picking a good-looking zoomlevel. You can use the <code class="docutils literal notranslate"><span class="pre">`Estimate</span> <span class="pre">zoomlevel`</span></code> feature to do just that. Let’s illustrate this with an example.</p>
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-09-06_2122.png" src="../_images/MPR_2016-09-06_2122.png" />
 </div>
 <p><em>Set the estimated width of the map in pixels and press the button to get a zoomlevel estimate.</em></p>
 <p>Let’s assume I’m making a still render of a map of Amsterdam. I’m using a satellite map with street labels, such as Mapbox streets-satellite. Since I’m using these labels, I want to be able to read them. I also want to see enough detail in the satellite image. This means I need to pick the proper zoomlevel. I base the zoomlevel on two factors: how big is my rendered map going to be (in pixels) and how big is the actual map (in meters). If my render is going to be 250 pixels wide I can get away with little detail in my map (lower zoomlevel). If my render is going to be 4K pixels wide I need a lot more detail (higher zoomlevel). If my map covers a few streets, I need to be able to see those streets up close and use a high zoomlevel. If my map covers an entire continent, I won’t bother with streets and I can use a much lower zoomlevel with less detail showing countries and large water bodies.</p>
-<p>The <code class="docutils literal"><span class="pre">`Estimate</span> <span class="pre">zoomlevel`</span></code> feature takes this into account and suggestes the appropriate zoomlevel for your map size both in km and px. In my example I’m using a still image. If you are rendering an animation or output to a realtime engine you need to take that into account.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">`Estimate</span> <span class="pre">zoomlevel`</span></code> feature takes this into account and suggestes the appropriate zoomlevel for your map size both in km and px. In my example I’m using a still image. If you are rendering an animation or output to a realtime engine you need to take that into account.</p>
 <p>Here’s what I mean with appropriate zoomlevel. My map is about 50*50 KM and I’ve set the width to 640 pixels. These images aren’t blowups from a single image, they’re actual separately generated maps and different zoomlevels. Each image is rendered at 640 pixels wide.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/Zoomlevel_Amsterdam_09.jpg" src="../_images/Zoomlevel_Amsterdam_09.jpg" />
 </div>
 <p><em>Amsterdam at zoomlevel 9. This is too rough, the label is very blurry as are the streets.</em></p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/Zoomlevel_Amsterdam_11.jpg" src="../_images/Zoomlevel_Amsterdam_11.jpg" />
 </div>
 <p><em>Amsterdam at zoomlevel 11. This is the suggested zoomlevel. The amount of detail in the image and labels is just right.</em></p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/Zoomlevel_Amsterdam_13.jpg" src="../_images/Zoomlevel_Amsterdam_13.jpg" />
 </div>
 <p><em>Amsterdam at zoomlevel 13. There’s more detail, but I can’t read the labels. Also the extra detail in the satellite image doesn’t help.</em></p>
@@ -300,8 +290,8 @@
 <h2>Copyright<a class="headerlink" href="#copyright" title="Permalink to this headline">¶</a></h2>
 <p>Each raster source comes with a copyright notice and an attribution string. It’s important to remember Maproom doesn’t own, sell or license the map data. You’ll have to make sure to include the attribution in your final output.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Content provided through Maproom is copyrighted by the respective owner. Check out the copyright, license and attribution conditions for each of these sources. The creator of this script does not claim ownership and can’t provide a license for this content.</p>
+<p class="admonition-title">Note</p>
+<p>Content provided through Maproom is copyrighted by the respective owner. Check out the copyright, license and attribution conditions for each of these sources. The creator of this script does not claim ownership and can’t provide a license for this content.</p>
 </div>
 </div>
 <div class="section" id="api-keys">
@@ -314,30 +304,30 @@
 <div class="section" id="using-a-raster-source-in-a-map">
 <h3>Using a raster source in a map<a class="headerlink" href="#using-a-raster-source-in-a-map" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
-<li>Open a terrain map layer</li>
-<li>Pick a raster source from the list</li>
-<li>Pick a zoom level</li>
-<li>Press the “Update map images” button</li>
+<li><p>Open a terrain map layer</p></li>
+<li><p>Pick a raster source from the list</p></li>
+<li><p>Pick a zoom level</p></li>
+<li><p>Press the “Update map images” button</p></li>
 </ol>
 <p>Maproom will request the necessary images from the raster source and assemble them into a map.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Maproom limits the amount of images it will download per map layer. This limit depends on the license you own. More about licensing here: <a class="reference internal" href="../Settings.html#license"><span class="std std-ref">License</span></a>.</p>
+<p class="admonition-title">Note</p>
+<p>Maproom limits the amount of images it will download per map layer. This limit depends on the license you own. More about licensing here: <a class="reference internal" href="../Settings.html#license"><span class="std std-ref">License</span></a>.</p>
 </div>
 </div>
 <div class="section" id="adding-heights-to-a-map">
 <h3>Adding heights to a map<a class="headerlink" href="#adding-heights-to-a-map" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
-<li>Open a terrain map layer</li>
-<li>Pick a DEM source</li>
-<li>Press the “Update map heights” button</li>
+<li><p>Open a terrain map layer</p></li>
+<li><p>Pick a DEM source</p></li>
+<li><p>Press the “Update map heights” button</p></li>
 </ol>
 <p>Maproom will request the necessary DEM data and assemble them into a map. You can add heights to a terrain with or without raster tiles.</p>
 </div>
 <div class="section" id="terrain-heights">
 <h3>Terrain heights<a class="headerlink" href="#terrain-heights" title="Permalink to this headline">¶</a></h3>
 <p>Finally the terrain heights determine which kind of heights you’re using.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2015-09-26_1642.png" src="../_images/MPR_2015-09-26_1642.png" />
 </div>
 <p><em>An overview of the available terrain height datasets. More on this here</em> <a class="reference internal" href="../Height.html#height"><span class="std std-ref">Height</span></a></p>
@@ -347,9 +337,7 @@
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -358,7 +346,7 @@
         <a href="Ripple.html" class="btn btn-neutral float-right" title="Ripple" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../About.html" class="btn btn-neutral" title="About" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../About.html" class="btn btn-neutral float-left" title="About" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -367,11 +355,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Klaas Nienhuis.
+        &copy; Copyright 2021, Klaas Nienhuis
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -384,36 +372,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

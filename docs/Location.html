@@ -17,42 +17,36 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="Maproom 1.0 documentation" href="index.html"/>
-        <link rel="next" title="Height" href="Height.html"/>
-        <link rel="prev" title="Map Tools" href="Tools.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Height" href="Height.html" />
+    <link rel="prev" title="Map Tools" href="Tools.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -108,6 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Stylesheet.html">Stylesheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="survey.html">Survey</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Version.html">Version requirement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="History.html">History</a></li>
 <li class="toctree-l1"><a class="reference internal" href="About.html">About</a></li>
@@ -138,12 +133,6 @@
 <li class="toctree-l1"><a class="reference internal" href="testing/mxs.html">Testing MaxScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testing/CS.html">Testing .NET</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Floating licenses</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="floatinglicense/Overview.html">Floating license overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="floatinglicense/LicenseServer.html">License server</a></li>
-<li class="toctree-l1"><a class="reference internal" href="floatinglicense/Client.html">License client</a></li>
-</ul>
 
             
           
@@ -154,7 +143,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Maproom</a>
@@ -162,9 +151,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -213,21 +203,21 @@
 <p>Each map layer has a location relative to the space of the complete map. This is called <em>offset</em>. The map layer uses the location set in the map space and adds an offset to it. By default this offset is set to 0,0. The offset is specified in projected map units which translates roughly to kilometers. If you change the offset of a map layer the location of this layer is calculated in degrees immediately and the map-helper in the scene is move accordingly. You can also move the map-helper in the scene. In that case the location and offset are calculated and displayed. For more on map helpers, go here: <a class="reference internal" href="MapHelpers.html#map-helpers"><span class="std std-ref">Map Helpers</span></a></p>
 <p id="offset-pyramid">Offsetting a map layer comes in handy in several situations. When you’re making an animation which zooms in on a particular area, you need to have a sharp map image at every camera position. However, it’s impossible to make a map of very large areas at a very high zoomlevel. You can use the offset and push properties of a map layer to create a map <em>pyramid</em>. Create multiple layers with increasing zoomlevel and decreasing size which follow the camera motion. This ensures you always have a sharp map.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">An automated way to get a zoomable and always sharp map is avaialbe with the new Ripple map type: <a class="reference internal" href="layers/Ripple.html#ripple"><span class="std std-ref">Ripple</span></a></p>
+<p class="admonition-title">Note</p>
+<p>An automated way to get a zoomable and always sharp map is avaialbe with the new Ripple map type: <a class="reference internal" href="layers/Ripple.html#ripple"><span class="std std-ref">Ripple</span></a></p>
 </div>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_2015-09-10_1603.png" src="_images/MPR_2015-09-10_1603.png" />
 </div>
 <p>Four map layers “follow” the camera path and provide increasing while the camera moves closer to the map</p>
 <iframe width="700" height="394" src="https://www.youtube.com/embed/nMT3g81je4Y?rel=0" frameborder="0" allowfullscreen></iframe><p>Zooming into a map</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/2015-09-10_193805.png" src="_images/2015-09-10_193805.png" />
 </div>
 <p>At the top: the location of the entire map. At the bottom: the location and offset of an individual map layer</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Map images from the same map provider might have drastically different colors at different zoomlevels. You can tweak the colors in photoshop or with a color correct map in 3ds Max though to get a consistent look.</p>
+<p class="admonition-title">Note</p>
+<p>Map images from the same map provider might have drastically different colors at different zoomlevels. You can tweak the colors in photoshop or with a color correct map in 3ds Max though to get a consistent look.</p>
 </div>
 <p>Another use of offset is to help find a particular area on a map. You have one, big map and a smaller one on top which has a higher zoomlevel. Now you use the offset on the smaller map to find an area on the bigger map. This is similar to using a magnifying glass.</p>
 <iframe width="700" height="525" src="https://www.youtube.com/embed/IsmCjQvJpDY?rel=0" frameborder="0" allowfullscreen></iframe><p>Finding an interesting area with offset</p>
@@ -235,12 +225,12 @@
 <div class="section" id="area">
 <h2>Area<a class="headerlink" href="#area" title="Permalink to this headline">¶</a></h2>
 <p>A map layer has an area. The area sets the boundaries for the map data used in this layer. In a terrain layer setting the area to 10x10 for instance will limit the downloaded map tiles to an area of 10x10 projected map units (rougly 10x10 KM). Some data sources will exceed the area, sometimes quite a lot. This happens mainly when using openstreetmap data. the bulk of the downloaded data falls within the area. Large elements, such as railroads or country borders which touch this area might be downloaded entirely. This is done to avoid clipping of elements.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_2015-09-09_1594_01.png" src="_images/MPR_2015-09-09_1594_01.png" />
 </div>
 <p>Offset and area</p>
-<p>If you specify an area which goes over a threshold, about 25000 KM in either width or height, Maproom will create a worldmap. To get the world dimensions, you can also press the <code class="docutils literal"><span class="pre">Give</span> <span class="pre">me</span> <span class="pre">the</span> <span class="pre">world</span></code> button. A map layer with a world size are offset to latitude longitude 0,0 automatically.</p>
-<div class="figure">
+<p>If you specify an area which goes over a threshold, about 25000 KM in either width or height, Maproom will create a worldmap. To get the world dimensions, you can also press the <code class="docutils literal notranslate"><span class="pre">Give</span> <span class="pre">me</span> <span class="pre">the</span> <span class="pre">world</span></code> button. A map layer with a world size are offset to latitude longitude 0,0 automatically.</p>
+<div class="figure align-default">
 <img alt="_images/MPR_2015-09-09_1595_01.png" src="_images/MPR_2015-09-09_1595_01.png" />
 </div>
 <p>World map dimensions</p>
@@ -248,27 +238,27 @@
 <div class="section" id="push">
 <span id="location-push"></span><h2>Push<a class="headerlink" href="#push" title="Permalink to this headline">¶</a></h2>
 <p>When you have multiple map layers, you could move each layer to a separate height to avoid z-fighting. You can do this manually or by using the <em>push</em> property in the layers. In the example I’ve placed three satellite images on top of each other. The base layer is a big map of Berlin and the surrounding area. The second layer covers most of the city and has more detail (i.e. a higher zoomlevel). The third layer is even smaller and more zoomed in. Layer two is pushed 1 unit. Layer three is pushed 2 units.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_2015-09-09_1596_01.png" src="_images/MPR_2015-09-09_1596_01.png" />
 </div>
 <p>Push</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_2015-09-09_1598.jpg" src="_images/MPR_2015-09-09_1598.jpg" />
 </div>
 <p>Three layers stacked on top of each other</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_2015-09-09_1599.jpg" src="_images/MPR_2015-09-09_1599.jpg" />
 </div>
 <p>Increasing detail</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_2015-09-09_1600.jpg" src="_images/MPR_2015-09-09_1600.jpg" />
 </div>
 <p>The smallest area has the highest detail</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_2015-09-09_1597.png" src="_images/MPR_2015-09-09_1597.png" />
 </div>
 <p>The push property in the layer panel</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_2015-09-09_1601.png" src="_images/MPR_2015-09-09_1601.png" />
 </div>
 <p>The stacked layers are pushed apart</p>
@@ -277,9 +267,7 @@
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -288,7 +276,7 @@
         <a href="Height.html" class="btn btn-neutral float-right" title="Height" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Tools.html" class="btn btn-neutral" title="Map Tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Tools.html" class="btn btn-neutral float-left" title="Map Tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -297,11 +285,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Klaas Nienhuis.
+        &copy; Copyright 2021, Klaas Nienhuis
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -314,36 +302,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

@@ -17,42 +17,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Maproom 1.0 documentation" href="../index.html"/>
-        <link rel="next" title="Testing .NET" href="CS.html"/>
-        <link rel="prev" title="Gall Stereographic" href="../mapprojection/GallStereographic.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Testing .NET" href="CS.html" />
+    <link rel="prev" title="Gall Stereographic" href="../mapprojection/GallStereographic.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -103,6 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Stylesheet.html">Stylesheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../survey.html">Survey</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Version.html">Version requirement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../History.html">History</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../About.html">About</a></li>
@@ -137,12 +132,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="CS.html">Testing .NET</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Floating licenses</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../floatinglicense/Overview.html">Floating license overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../floatinglicense/LicenseServer.html">License server</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../floatinglicense/Client.html">License client</a></li>
-</ul>
 
             
           
@@ -153,7 +142,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Maproom</a>
@@ -161,9 +150,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -208,23 +198,21 @@
   <div class="section" id="testing-maxscript">
 <h1>Testing MaxScript<a class="headerlink" href="#testing-maxscript" title="Permalink to this headline">¶</a></h1>
 <p>The newer Maproom releases also come with a built in test system. This is my attempt to use some sort of test driven development approach in 3dsMax. Having these tests will certainly help me releasing a more stable Maproom while keeping adding new features.</p>
-<p>Download the a Maproom release with tests here <a class="reference external" href="https://www.dropbox.com/sh/z25tbqrmmrg7obq/AAAFIaefGu0_9o1sLqGb4LKAa?dl=0">testable maproom release</a>. Get the latest mzp-file labeled with <code class="docutils literal"><span class="pre">TEST</span></code> in the filename.</p>
+<p>Download the a Maproom release with tests here <a class="reference external" href="https://www.dropbox.com/sh/z25tbqrmmrg7obq/AAAFIaefGu0_9o1sLqGb4LKAa?dl=0">testable maproom release</a>. Get the latest mzp-file labeled with <code class="docutils literal notranslate"><span class="pre">TEST</span></code> in the filename.</p>
 <div class="section" id="test-instructions">
 <h2>Test instructions<a class="headerlink" href="#test-instructions" title="Permalink to this headline">¶</a></h2>
-<p>If you’ve just downloaded the mzp-file, install it first (<a class="reference internal" href="../Installation.html#installation"><span class="std std-ref">Installation</span></a>). To run the tests, go to the Maproom installation folder. That’s something like this: <code class="docutils literal"><span class="pre">C:\Users\[username]\AppData\Local\Autodesk\3dsMax\[3ds</span> <span class="pre">max</span> <span class="pre">version]\ENU\scripts\KlaasTools\Maproom\scriptfiles\tests</span></code>. In that folder there’s a file called <code class="docutils literal"><span class="pre">Test_root.mse</span></code>. Drag and drop this file into a 3dsMax viewport.</p>
+<p>If you’ve just downloaded the mzp-file, install it first (<a class="reference internal" href="../Installation.html#installation"><span class="std std-ref">Installation</span></a>). To run the tests, go to the Maproom installation folder. That’s something like this: <code class="docutils literal notranslate"><span class="pre">C:\Users\[username]\AppData\Local\Autodesk\3dsMax\[3ds</span> <span class="pre">max</span> <span class="pre">version]\ENU\scripts\KlaasTools\Maproom\scriptfiles\tests</span></code>. In that folder there’s a file called <code class="docutils literal notranslate"><span class="pre">Test_root.mse</span></code>. Drag and drop this file into a 3dsMax viewport.</p>
 <p>While the tests are running, info is being printed out to the maxscript listener (press F11 to open it). Copy and paste this info into a text file and send it to <a class="reference external" href="mailto:mail&#37;&#52;&#48;klaasnienhuis&#46;nl">mail<span>&#64;</span>klaasnienhuis<span>&#46;</span>nl</a>.</p>
 </div>
 <div class="section" id="manual-check">
 <h2>Manual check<a class="headerlink" href="#manual-check" title="Permalink to this headline">¶</a></h2>
-<p>The tests (should) also create some images in your user folder. They should be about here: <code class="docutils literal"><span class="pre">C:\Users\[username]\Documents\3dsMax\Maproom_Test_MXS</span></code>. Please zip that entire folder and send it over too.</p>
+<p>The tests (should) also create some images in your user folder. They should be about here: <code class="docutils literal notranslate"><span class="pre">C:\Users\[username]\Documents\3dsMax\Maproom_Test_MXS</span></code>. Please zip that entire folder and send it over too.</p>
 </div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -233,7 +221,7 @@
         <a href="CS.html" class="btn btn-neutral float-right" title="Testing .NET" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../mapprojection/GallStereographic.html" class="btn btn-neutral" title="Gall Stereographic" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../mapprojection/GallStereographic.html" class="btn btn-neutral float-left" title="Gall Stereographic" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -242,11 +230,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Klaas Nienhuis.
+        &copy; Copyright 2021, Klaas Nienhuis
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -259,36 +247,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

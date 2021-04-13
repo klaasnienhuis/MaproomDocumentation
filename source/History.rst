@@ -3,13 +3,21 @@
 History
 =======
 
+70
+--
+
+New Features
+^^^^^^^^^^^^
+
+- New licensing server
+
 53
 --
 
 New Features
 ^^^^^^^^^^^^
 
-- **Network license**: use a single license on multiple machines within a local network :ref:`floatoverview`
+- **DEPRECATED Network license**: use a single license on multiple machines within a local network.
 - **KML**: kml import and export is now properly supported :ref:`kml`
 
 Fixed

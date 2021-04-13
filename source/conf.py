@@ -16,7 +16,7 @@
 import sys
 import os
 import shlex
-import sphinx_bootstrap_theme
+# import sphinx_bootstrap_theme
 
 
 # otherwise, readthedocs.org uses their theme by default, so no need to specify it
@@ -53,7 +53,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Maproom'
-copyright = '2017, Klaas Nienhuis'
+copyright = '2021, Klaas Nienhuis'
 author = 'Klaas Nienhuis'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -158,7 +158,7 @@ html_theme_options = {
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+# html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".

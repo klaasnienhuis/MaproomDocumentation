@@ -17,42 +17,36 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="Maproom 1.0 documentation" href="index.html"/>
-        <link rel="next" title="Map Layers" href="MapLayers.html"/>
-        <link rel="prev" title="Basic Concepts" href="BasicConcepts.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Map Layers" href="MapLayers.html" />
+    <link rel="prev" title="Basic Concepts" href="BasicConcepts.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -109,6 +103,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Stylesheet.html">Stylesheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="survey.html">Survey</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Version.html">Version requirement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="History.html">History</a></li>
 <li class="toctree-l1"><a class="reference internal" href="About.html">About</a></li>
@@ -139,12 +134,6 @@
 <li class="toctree-l1"><a class="reference internal" href="testing/mxs.html">Testing MaxScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testing/CS.html">Testing .NET</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Floating licenses</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="floatinglicense/Overview.html">Floating license overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="floatinglicense/LicenseServer.html">License server</a></li>
-<li class="toctree-l1"><a class="reference internal" href="floatinglicense/Client.html">License client</a></li>
-</ul>
 
             
           
@@ -155,7 +144,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Maproom</a>
@@ -163,9 +152,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -214,11 +204,11 @@
 <div class="section" id="satellite">
 <h2>Satellite<a class="headerlink" href="#satellite" title="Permalink to this headline">¶</a></h2>
 <p>The Satellite preset has a single terrain layer enabled with OSMmapnik as raster source. The default settings give you a map of Berlin and its surroundings.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_2015-09-08_1590.jpg" src="_images/MPR_2015-09-08_1590.jpg" />
 </div>
 <p>Berlin and its surroundings</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_2015-09-08_1591.png" src="_images/MPR_2015-09-08_1591.png" />
 </div>
 <p>The <em>Satellite</em> preset default settings</p>
@@ -226,11 +216,11 @@
 <div class="section" id="satellite-and-terrain">
 <h2>Satellite and Terrain<a class="headerlink" href="#satellite-and-terrain" title="Permalink to this headline">¶</a></h2>
 <p>The Satellite and Terrain preset uses a single terrain layer with OSMmapnik as raster source and SRTM3 as source for heights. The default settings result in a piece of the Grand Canyon.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/Satallite_terrain.jpg" src="_images/Satallite_terrain.jpg" />
 </div>
 <p>The Grand Canyon</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_2015-09-08_1592.png" src="_images/MPR_2015-09-08_1592.png" />
 </div>
 <p>The <em>SatelliteTerrain</em> preset default settings</p>
@@ -238,32 +228,32 @@
 <div class="section" id="osm">
 <h2>OSM<a class="headerlink" href="#osm" title="Permalink to this headline">¶</a></h2>
 <p>The openstreetmap preset uses a single osm layer which is set to download buildings. You can easily switch it to download other shapes from openstreetmap. The default settings give you the buildings located around Central Park in Manhattan.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/OSM_manhattan.jpg" src="_images/OSM_manhattan.jpg" />
 </div>
 <p>Manhattan</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_2015-09-08_1593.png" src="_images/MPR_2015-09-08_1593.png" />
 </div>
 </div>
 <div class="section" id="demo-presets">
 <span id="preset-demo"></span><h2>Demo presets<a class="headerlink" href="#demo-presets" title="Permalink to this headline">¶</a></h2>
-<p>There are three demo presets, available in Maproom Pro and Free. These are <code class="docutils literal"><span class="pre">Demo</span> <span class="pre">New</span> <span class="pre">York</span></code>, <code class="docutils literal"><span class="pre">Demo</span> <span class="pre">London</span></code> and <code class="docutils literal"><span class="pre">Demo</span> <span class="pre">Miami</span></code>. These three presets contain a satellite, openstreetmap and cyberCity 3D layer. The location and size of each preset is fixed, but you can experiment all you want with the different layers.
+<p>There are three demo presets, available in Maproom Pro and Free. These are <code class="docutils literal notranslate"><span class="pre">Demo</span> <span class="pre">New</span> <span class="pre">York</span></code>, <code class="docutils literal notranslate"><span class="pre">Demo</span> <span class="pre">London</span></code> and <code class="docutils literal notranslate"><span class="pre">Demo</span> <span class="pre">Miami</span></code>. These three presets contain a satellite, openstreetmap and cyberCity 3D layer. The location and size of each preset is fixed, but you can experiment all you want with the different layers.
 The <em>osm</em> preset default settings</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/MPR_2017-01-26_2270.png" src="_images/MPR_2017-01-26_2270.png" />
 </div>
 <p><em>The Demo presets, also available in Maproom Free</em></p>
 <p>For the description of each maplayer check <a class="reference internal" href="layers/CC3D.html#cc3d"><span class="std std-ref">CyberCity 3D, Inc. (CC3D)</span></a>, <a class="reference internal" href="layers/Openstreetmap.html#layer-osm"><span class="std std-ref">Openstreetmap</span></a> and <a class="reference internal" href="layers/Satellite.html#layer-satellite"><span class="std std-ref">Satellite</span></a> . To work with the cyberCity 3D data you first need to download the free sample data, it’s very easy: <a class="reference internal" href="layers/CC3D.html#cc3dsampledata"><span class="std std-ref">Sample data</span></a>. Once you have it you can make maps exactly like these. These have been created with the Demo map presets.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/Maproom_CyberCity3D_London_small.jpg" src="_images/Maproom_CyberCity3D_London_small.jpg" />
 </div>
 <p><em>London Demo preset</em></p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/Maproom_CyberCity3D_Miami_small.jpg" src="_images/Maproom_CyberCity3D_Miami_small.jpg" />
 </div>
 <p><em>Miami Demo preset</em></p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="_images/Maproom_CyberCity3D_NewYork_small.jpg" src="_images/Maproom_CyberCity3D_NewYork_small.jpg" />
 </div>
 <p><em>New York Demo preset</em></p>
@@ -272,9 +262,7 @@ The <em>osm</em> preset default settings</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -283,7 +271,7 @@ The <em>osm</em> preset default settings</p>
         <a href="MapLayers.html" class="btn btn-neutral float-right" title="Map Layers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="BasicConcepts.html" class="btn btn-neutral" title="Basic Concepts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="BasicConcepts.html" class="btn btn-neutral float-left" title="Basic Concepts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -292,11 +280,11 @@ The <em>osm</em> preset default settings</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Klaas Nienhuis.
+        &copy; Copyright 2021, Klaas Nienhuis
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -309,36 +297,15 @@ The <em>osm</em> preset default settings</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

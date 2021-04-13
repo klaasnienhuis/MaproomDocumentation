@@ -17,42 +17,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Maproom 1.0 documentation" href="../index.html"/>
-        <link rel="next" title="License client" href="Client.html"/>
-        <link rel="prev" title="Floating license overview" href="Overview.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="License client" href="Client.html" />
+    <link rel="prev" title="Floating license overview" href="Overview.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -103,6 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Stylesheet.html">Stylesheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../survey.html">Survey</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Version.html">Version requirement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../History.html">History</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../About.html">About</a></li>
@@ -152,7 +147,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Maproom</a>
@@ -160,9 +155,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -211,23 +207,21 @@
 <p>First you need to activate the license server with the product key. This means you authenticate yourself with me. Once the license server has been activated it can be started. From that moment on clients can lease licenses. There’s no authentication between the client and the server. The client asks for a lease. If it’s there, the server hands it over. No questions asked!</p>
 <p>I’ve created a few convenient bat-files to operate the server. They require a few files to be present in the same folder as the bat-files:</p>
 <ul class="simple">
-<li>float_server.log</li>
-<li>LexFloat.config</li>
-<li>Product.dat</li>
-<li>productkey.txt</li>
+<li><p>float_server.log</p></li>
+<li><p>LexFloat.config</p></li>
+<li><p>Product.dat</p></li>
+<li><p>productkey.txt</p></li>
 </ul>
-<p>The config file allows you to configure a number of things. For instance the port number for the license server (8091 by default). <code class="docutils literal"><span class="pre">productkey.txt</span></code> should contain the product key of the floating license.</p>
+<p>The config file allows you to configure a number of things. For instance the port number for the license server (8091 by default). <code class="docutils literal notranslate"><span class="pre">productkey.txt</span></code> should contain the product key of the floating license.</p>
 <div class="section" id="license-server-api">
 <h2>License server API<a class="headerlink" href="#license-server-api" title="Permalink to this headline">¶</a></h2>
-<p>Once the license server is up and running, you can check its status and the number of leased licenses through a web api. The address is <code class="docutils literal"><span class="pre">serverip:serverport/services/api/stats</span></code>. For example <code class="docutils literal"><span class="pre">http://192.168.2.1:8091/services/api/stats</span></code> if the license server runs on a machine with the ip address <code class="docutils literal"><span class="pre">192.168.2.1</span></code> and the port <code class="docutils literal"><span class="pre">8091</span></code>.</p>
+<p>Once the license server is up and running, you can check its status and the number of leased licenses through a web api. The address is <code class="docutils literal notranslate"><span class="pre">serverip:serverport/services/api/stats</span></code>. For example <code class="docutils literal notranslate"><span class="pre">http://192.168.2.1:8091/services/api/stats</span></code> if the license server runs on a machine with the ip address <code class="docutils literal notranslate"><span class="pre">192.168.2.1</span></code> and the port <code class="docutils literal notranslate"><span class="pre">8091</span></code>.</p>
 </div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -236,7 +230,7 @@
         <a href="Client.html" class="btn btn-neutral float-right" title="License client" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Overview.html" class="btn btn-neutral" title="Floating license overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Overview.html" class="btn btn-neutral float-left" title="Floating license overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -245,11 +239,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Klaas Nienhuis.
+        &copy; Copyright 2017, Klaas Nienhuis
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -262,36 +256,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

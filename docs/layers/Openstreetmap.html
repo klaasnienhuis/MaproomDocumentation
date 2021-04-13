@@ -17,42 +17,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Maproom 1.0 documentation" href="../index.html"/>
-        <link rel="next" title="Shapefile" href="Shapefile.html"/>
-        <link rel="prev" title="Ripple" href="Ripple.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Shapefile" href="Shapefile.html" />
+    <link rel="prev" title="Ripple" href="Ripple.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -103,6 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Stylesheet.html">Stylesheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../survey.html">Survey</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Version.html">Version requirement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../History.html">History</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../About.html">About</a></li>
@@ -142,12 +137,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../testing/mxs.html">Testing MaxScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../testing/CS.html">Testing .NET</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Floating licenses</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../floatinglicense/Overview.html">Floating license overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../floatinglicense/LicenseServer.html">License server</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../floatinglicense/Client.html">License client</a></li>
-</ul>
 
             
           
@@ -158,7 +147,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Maproom</a>
@@ -166,9 +155,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -214,31 +204,31 @@
 <span id="layer-osm"></span><h1>Openstreetmap<a class="headerlink" href="#openstreetmap" title="Permalink to this headline">¶</a></h1>
 <p>OSM layers use <a class="reference external" href="https://www.openstreetmap.org">openstreetmap</a> data and consist of shapes. Shapes can either be closed, such as outlines of buildings or parks, or shapes can be open, such as centerlines of roads and waterways. You can either get the entire OSM dataset for an area or pick the elements you want before downloading and drawing the data. OSM data can get very dense, especially in urban areas. It’s not advised to use OSM to get large objects, such as the borders of a country or all railroads of a state. Use the Shapefile layer for that.</p>
 <p>Since this is open source data make sure to attribute openstreetmap and its contributors in your final results.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2015-09-14_1623.png" src="../_images/MPR_2015-09-14_1623.png" />
 </div>
 <p>OSM data can get very dense and unsuitable for larger maps. Try to filter what you need.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2015-09-14_1624.png" src="../_images/MPR_2015-09-14_1624.png" />
 </div>
 <p>Smaller areas are very well served with osm data. You can use the buildings and roads to quickly create environments.</p>
 <p>Once the shapes have been created in your scene you can make geometry based on these shapes. You can do this manually or use the <a class="reference internal" href="../Stylesheet.html#stylesheet"><span class="std std-ref">Stylesheet</span></a> feature to generate the geometry for you.</p>
 <div class="section" id="query">
 <h2>Query<a class="headerlink" href="#query" title="Permalink to this headline">¶</a></h2>
-<p>OSM data is fetched by a query. This query specifies which area you want to download (this is determined in the location panel of the layer) and what should be in it. You can query the complete osm data of an area but you can also be more specific. For instance get only the buildings or parks. Or really drill down to get streets with a specific name or all firestations. Keep in mind this data is maintained by a community and might not be accurate or complete. On the other hand, the osm community is very fast to respond when disasters happen and creates maps of the affected areas within hours. There are four query levels: <code class="docutils literal"><span class="pre">Full</span> <span class="pre">OSM</span></code>, <code class="docutils literal"><span class="pre">Layer</span></code>, <code class="docutils literal"><span class="pre">Key=Value</span></code> and <code class="docutils literal"><span class="pre">From</span> <span class="pre">file</span></code>.</p>
+<p>OSM data is fetched by a query. This query specifies which area you want to download (this is determined in the location panel of the layer) and what should be in it. You can query the complete osm data of an area but you can also be more specific. For instance get only the buildings or parks. Or really drill down to get streets with a specific name or all firestations. Keep in mind this data is maintained by a community and might not be accurate or complete. On the other hand, the osm community is very fast to respond when disasters happen and creates maps of the affected areas within hours. There are four query levels: <code class="docutils literal notranslate"><span class="pre">Full</span> <span class="pre">OSM</span></code>, <code class="docutils literal notranslate"><span class="pre">Layer</span></code>, <code class="docutils literal notranslate"><span class="pre">Key=Value</span></code> and <code class="docutils literal notranslate"><span class="pre">From</span> <span class="pre">file</span></code>.</p>
 </div>
 <div class="section" id="full-osm">
 <h2>Full OSM<a class="headerlink" href="#full-osm" title="Permalink to this headline">¶</a></h2>
 <p>Full OSM gets all osm data of a specific area. When the data is imported into 3ds Max as shapes, objects with the same labels are being merged together to improve performance. This means highways are merged together and buildings are merged together. They aren’t mixed. The merged objects get an appropriate name. This makes it easier to edit them afterwards.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-05-18_2021.png" src="../_images/MPR_2016-05-18_2021.png" />
 </div>
-<p>The query has been set to <code class="docutils literal"><span class="pre">Full</span> <span class="pre">OSM</span></code></p>
-<div class="figure">
+<p>The query has been set to <code class="docutils literal notranslate"><span class="pre">Full</span> <span class="pre">OSM</span></code></p>
+<div class="figure align-default">
 <img alt="../_images/MPR_2015-09-26_1645.png" src="../_images/MPR_2015-09-26_1645.png" />
 </div>
 <p>The full OSM dataset for a piece of New York around Central Park</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2015-09-26_1646.png" src="../_images/MPR_2015-09-26_1646.png" />
 </div>
 <p>The same dataset, zoomed in at The Metropolitan Museum of Art</p>
@@ -246,49 +236,49 @@
 <div class="section" id="layer">
 <h2>Layer<a class="headerlink" href="#layer" title="Permalink to this headline">¶</a></h2>
 <p>Osm contains a set of common tags. These are tags such as <em>highway</em> (covers all roads, from highways to hiking trails), <em>building</em> or <em>amenity</em>. You can pick one or more of these tags as layers to be downloaded. This is a quick way to get a good map without having too many shapes to deal with. Just check the layers you need in the dropdown. It helps if you make yourself familiar with the tags som normally uses.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-05-18_2022.png" src="../_images/MPR_2016-05-18_2022.png" />
 </div>
-<p>The query has been set to <code class="docutils literal"><span class="pre">Layer</span></code>. The selected layer is <code class="docutils literal"><span class="pre">leisure</span></code></p>
-<div class="figure">
+<p>The query has been set to <code class="docutils literal notranslate"><span class="pre">Layer</span></code>. The selected layer is <code class="docutils literal notranslate"><span class="pre">leisure</span></code></p>
+<div class="figure align-default">
 <img alt="../_images/MPR_2015-09-26_1647.png" src="../_images/MPR_2015-09-26_1647.png" />
 </div>
 <p>All leisure stuff in this area. Notice the bright green shapes, these are basebal pitches and tennis courts</p>
 <p>Instead of being restricted to a single OSM layer you can combine multiple OSM layers. This helps you get the most important layers for a map, while ignoring the stuff you don’t need.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2015-09-26_1654.png" src="../_images/MPR_2015-09-26_1654.png" />
 </div>
-<p>Baseball and tennis (leisure), footpaths and parking (highway) <a class="footnote-reference" href="#id5" id="id2">[1]</a></p>
-<div class="figure">
+<p>Baseball and tennis (leisure), footpaths and parking (highway) <a class="footnote-reference brackets" href="#id5" id="id2">1</a></p>
+<div class="figure align-default">
 <img alt="../_images/MPR_2015-09-26_1653.png" src="../_images/MPR_2015-09-26_1653.png" />
 </div>
 <p>A list of available layers. You can make any combination</p>
 </div>
 <div class="section" id="key-value">
 <h2>Key/Value<a class="headerlink" href="#key-value" title="Permalink to this headline">¶</a></h2>
-<p>This query can get you very specific items, such as just the firestations or bike routes. Setting this up does require a bit of knowledge about osm. You need to know what you can look for <a class="footnote-reference" href="#id6" id="id3">[2]</a>.</p>
-<div class="figure">
+<p>This query can get you very specific items, such as just the firestations or bike routes. Setting this up does require a bit of knowledge about osm. You need to know what you can look for <a class="footnote-reference brackets" href="#id6" id="id3">2</a>.</p>
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-05-18_2023.png" src="../_images/MPR_2016-05-18_2023.png" />
 </div>
-<p>To get all footways, enter <code class="docutils literal"><span class="pre">highway</span></code> in the first field and <code class="docutils literal"><span class="pre">footway</span></code> in the second.</p>
-<div class="figure">
+<p>To get all footways, enter <code class="docutils literal notranslate"><span class="pre">highway</span></code> in the first field and <code class="docutils literal notranslate"><span class="pre">footway</span></code> in the second.</p>
+<div class="figure align-default">
 <img alt="../_images/MPR_2015-09-26_1650.png" src="../_images/MPR_2015-09-26_1650.png" />
 </div>
 <p>The highest concentration of footways is found in central Park</p>
 </div>
 <div class="section" id="from-file">
 <h2>From file<a class="headerlink" href="#from-file" title="Permalink to this headline">¶</a></h2>
-<p>If you already have osm data downloaded in .osm or .xml format you can use that file instead of downloading new data. This allows you to make pretty complex queries with Overpass Turbo <a class="footnote-reference" href="#id7" id="id4">[3]</a> for instance. When loading an osm file from disk you have to take care of your location settings. An osm file has its location built in. If you set the location of your osm layer in maproom to Tokyo for instance and then load an osm file of Moscow, the osm shapes will be drawn quite far away from your map helper. Also the area settings will be ignored. The entire osm file will be loaded.</p>
+<p>If you already have osm data downloaded in .osm or .xml format you can use that file instead of downloading new data. This allows you to make pretty complex queries with Overpass Turbo <a class="footnote-reference brackets" href="#id7" id="id4">3</a> for instance. When loading an osm file from disk you have to take care of your location settings. An osm file has its location built in. If you set the location of your osm layer in maproom to Tokyo for instance and then load an osm file of Moscow, the osm shapes will be drawn quite far away from your map helper. Also the area settings will be ignored. The entire osm file will be loaded.</p>
 <p>You’ll notice quite soon that if the distance between the map helper and your osm data becomes too great, 3dsMax isn’t able to draw your shapes properly.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-05-18_2024.png" src="../_images/MPR_2016-05-18_2024.png" />
 </div>
 <p>Get a previously downloaded osm file</p>
 </div>
 <div class="section" id="terrain">
 <h2>Terrain<a class="headerlink" href="#terrain" title="Permalink to this headline">¶</a></h2>
-<p>OSM data can be aligned to a terrain. It works quite fast too. If you have a terrain layer in your map which has heights you can select it from the dropdown and press the <code class="docutils literal"><span class="pre">Align</span> <span class="pre">shapes</span> <span class="pre">to</span></code> button. Your osm data will be draped on the terrain. If you want to make the shapes flat again, use the <code class="docutils literal"><span class="pre">ground</span> <span class="pre">plane</span></code> option from the dropdown.</p>
-<div class="figure">
+<p>OSM data can be aligned to a terrain. It works quite fast too. If you have a terrain layer in your map which has heights you can select it from the dropdown and press the <code class="docutils literal notranslate"><span class="pre">Align</span> <span class="pre">shapes</span> <span class="pre">to</span></code> button. Your osm data will be draped on the terrain. If you want to make the shapes flat again, use the <code class="docutils literal notranslate"><span class="pre">ground</span> <span class="pre">plane</span></code> option from the dropdown.</p>
+<div class="figure align-default">
 <img alt="../_images/MPR_2016-03-01_1903.png" src="../_images/MPR_2016-03-01_1903.png" />
 </div>
 <p>Apply heights to osm shapes</p>
@@ -297,36 +287,27 @@
 <div class="section" id="stylesheet">
 <h2>Stylesheet<a class="headerlink" href="#stylesheet" title="Permalink to this headline">¶</a></h2>
 <p>Once you have the shapes you probably want to build geometry based on them. Maybe extrude some building outlines or sweep a few roads. You can automate this process with a stylesheet. While your needs might be very specific, a stylesheet is a great way to get a head start. Read more about the stylesheets here: <a class="reference internal" href="../Stylesheet.html#stylesheet"><span class="std std-ref">Stylesheet</span></a>.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/Weimar_style1.jpg" src="../_images/Weimar_style1.jpg" />
 </div>
 <p>A style creates geometry like this in the blink of an eye</p>
-<table class="docutils footnote" frame="void" id="id5" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td><a class="reference external" href="https://www.google.nl/maps/place/The+Metropolitan+Museum+of+Art/&#64;40.7917319,-73.9594233,17.42z/data=!4m3!3m2!1s0x89c25896f660c26f:0x3b2fa4f4b6c6a1fa!4b1">North Meadow Baseball Field</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id6" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td>Common tags can be found here: <a class="reference external" href="https://taginfo.openstreetmap.org">taginfo</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id7" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id4">[3]</a></td><td>Overpass turbo helps you make powerful and detailed osm queries: <a class="reference external" href="http://overpass-turbo.eu/">taginfo</a></td></tr>
-</tbody>
-</table>
+<dl class="footnote brackets">
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p><a class="reference external" href="https://www.google.nl/maps/place/The+Metropolitan+Museum+of+Art/&#64;40.7917319,-73.9594233,17.42z/data=!4m3!3m2!1s0x89c25896f660c26f:0x3b2fa4f4b6c6a1fa!4b1">North Meadow Baseball Field</a></p>
+</dd>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p>Common tags can be found here: <a class="reference external" href="https://taginfo.openstreetmap.org">taginfo</a></p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
+<dd><p>Overpass turbo helps you make powerful and detailed osm queries: <a class="reference external" href="http://overpass-turbo.eu/">taginfo</a></p>
+</dd>
+</dl>
 </div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -335,7 +316,7 @@
         <a href="Shapefile.html" class="btn btn-neutral float-right" title="Shapefile" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Ripple.html" class="btn btn-neutral" title="Ripple" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Ripple.html" class="btn btn-neutral float-left" title="Ripple" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -344,11 +325,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Klaas Nienhuis.
+        &copy; Copyright 2021, Klaas Nienhuis
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -361,36 +342,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

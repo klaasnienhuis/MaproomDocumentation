@@ -17,42 +17,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Maproom 1.0 documentation" href="../index.html"/>
-        <link rel="next" title="KML" href="KML.html"/>
-        <link rel="prev" title="Openstreetmap" href="Openstreetmap.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="KML" href="KML.html" />
+    <link rel="prev" title="Openstreetmap" href="Openstreetmap.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -103,6 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Stylesheet.html">Stylesheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../survey.html">Survey</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Version.html">Version requirement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../History.html">History</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../About.html">About</a></li>
@@ -136,12 +131,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../testing/mxs.html">Testing MaxScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../testing/CS.html">Testing .NET</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Floating licenses</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../floatinglicense/Overview.html">Floating license overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../floatinglicense/LicenseServer.html">License server</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../floatinglicense/Client.html">License client</a></li>
-</ul>
 
             
           
@@ -152,7 +141,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Maproom</a>
@@ -160,9 +149,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -207,26 +197,26 @@
   <div class="section" id="shapefile">
 <span id="layer-shapefile"></span><h1>Shapefile<a class="headerlink" href="#shapefile" title="Permalink to this headline">¶</a></h1>
 <p>The shapefile is a format created by ESRI for GIS systems. It’s widely adopted. A shapefile is usually a collection of files, containing geometric data (points, lines) and other data such as labels and tags. You can use your own shapefiles but the support in Maproom is rather limited. Maproom has been tested with the shapefiles from <a class="reference external" href="http://www.naturalearthdata.com/">Natural Earth</a>. They maintain very good shapefiles which are exceptionally well suited to make large scale and world maps.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2015-09-14_1621.png" src="../_images/MPR_2015-09-14_1621.png" />
 </div>
 <p>A map with two shapefile layers: global coastlines and international airpoirts</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2015-09-14_1622.png" src="../_images/MPR_2015-09-14_1622.png" />
 </div>
 <p>Notice the coastline is made for large scale maps. Also, some data from the shapefiles is loaded into maproom such as the airport names in this case.</p>
 <div class="section" id="interface">
 <h2>Interface<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h2>
-<p>Pick a shapefile and press <code class="docutils literal"><span class="pre">Place</span> <span class="pre">shapefile</span></code>. The shapefile is placed in your scene. In some cases data from the shapefile is retained. In the above example for instance the names of the airports or below the names of countries.</p>
-<div class="figure">
+<p>Pick a shapefile and press <code class="docutils literal notranslate"><span class="pre">Place</span> <span class="pre">shapefile</span></code>. The shapefile is placed in your scene. In some cases data from the shapefile is retained. In the above example for instance the names of the airports or below the names of countries.</p>
+<div class="figure align-default">
 <img alt="../_images/MPR_2015-09-26_1656.png" src="../_images/MPR_2015-09-26_1656.png" />
 </div>
-<p>Press <code class="docutils literal"><span class="pre">Pick...</span></code> to open a file dialog and find the shapefile you want</p>
-<div class="figure">
+<p>Press <code class="docutils literal notranslate"><span class="pre">Pick...</span></code> to open a file dialog and find the shapefile you want</p>
+<div class="figure align-default">
 <img alt="../_images/MPR_2015-09-26_1658.png" src="../_images/MPR_2015-09-26_1658.png" />
 </div>
 <p>This shapefile contains the coutnries at 1:110 million scale</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/MPR_2015-09-26_1659.png" src="../_images/MPR_2015-09-26_1659.png" />
 </div>
 <p>Each shape has the name of the country it actually represents: very handy!</p>
@@ -235,9 +225,7 @@
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -246,7 +234,7 @@
         <a href="KML.html" class="btn btn-neutral float-right" title="KML" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Openstreetmap.html" class="btn btn-neutral" title="Openstreetmap" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Openstreetmap.html" class="btn btn-neutral float-left" title="Openstreetmap" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -255,11 +243,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Klaas Nienhuis.
+        &copy; Copyright 2021, Klaas Nienhuis
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -272,36 +260,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

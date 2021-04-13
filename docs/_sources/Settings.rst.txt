@@ -76,32 +76,24 @@ License
 
 By default Maproom comes with a free license. You're able to create good looking image based maps with the free version. If you'd like to build bigger maps and use terrain heights, openstreetmap, shapefiles and more you can purchase a pro license. You can purchase a pro license in `the shop. <https://www.klaasnienhuis.nl/product/maproom/>`_
 
-.. todo:: Update purchasing and license request process video.
-
 .. raw:: html
 
 		<iframe width="700" height="525" src="https://www.youtube.com/embed/rwlGYHwbu4E" frameborder="0" allowfullscreen></iframe>
 		
-*Get a free beta license*
+*Get a free license*
+
+Starting with Maproom 70 you can access your license through an online portal. You can for instance see if your license has been activated and deactivate it yourself. The portal can be found here: https://klaasnienhuis.cryptlex.app. Use your email address and a fresh password to gain access.
 
 Node locked
 ^^^^^^^^^^^
 
-You can purchase node locked licenses in the shop. Each license can be used on one PC at a time. The system works with your email address and a plain text product key. You get the product key by email after the purchase has been processed. In the License tab of the Settings panel presse the little pencil icon and paste your product key. Press the green checkmark icon and finally the ``Activate product key...`` button. This will activate your pro license and tie it to the PC you're working on. You'll need to restart Maproom for the new key to take effect.
+You can purchase node locked licenses in the shop. Each license can be used on one PC at a time. The system works with your email address and a plain text product key. You get the product key by email after the purchase has been processed. In the License tab of the Settings panel paste your product key. Press the ``Activate product key...`` button. This will activate your pro license and tie it to the PC you're working on. You'll need to restart Maproom for the new key to take effect.
 
 If you buy multiple keys in one go, you get multiple product keys. You can activate each key on a different machine.
 
-.. image:: _images\\MPR_2017-07-25_2531.png
+.. image:: _images\\2021-04-13_213927.png
 
 *Open the license panel in the settings. By default it shows the node locked license options*
-
-.. image:: _images\\MPR_2017-07-25_2535.png
-
-*Press the little pencil icon to enter the product key*
-
-.. image:: _images\\MPR_2017-07-25_2536.png
-
-*Paste in your product key, press the green checkmark and press* ``Activate product key...``
 
 After activating your product key, it's locked to this machine. Please restart Maproom for the licnese changes to take effect.
 
@@ -110,7 +102,13 @@ You can also deactivate a product key. This means that you make the product key 
 Floating license
 ^^^^^^^^^^^^^^^^
 
-It's possible to purchase a floating license for bulk orders. For example if you want to use Maproom in a teaching environment or a large studio with many seats. A floating license doesn't add extra functionality. For more details on floating licenses go here: :ref:`floatinglicense`.
+It's possible to purchase a floating license for bulk orders. For example if you want to use Maproom in a teaching environment or a large studio with many seats. A floating license doesn't add extra functionality.
+
+A floating license works with a hosted license server. A single floating license can contain multiple seats. A user of maproom enters the product key as described above and activates it. This leases a single seat from the license. Closing maproom releases that seat. 
+
+If for instance you have purchased 10 licenses, the server can hand out leases to 10 clients. If the 11th client requests a lease from the server, it's denied. The number of clients on the network is infinite but only 10 of these clients can lease a license at the same time. All other clients operate with a free license.
+
+A floating license can't be purchased from the shop yet. Get in touch with me at mail-at-klaasnienhuis.nl to set it up.
 
 Feature comparison
 ^^^^^^^^^^^^^^^^^^
